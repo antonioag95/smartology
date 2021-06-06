@@ -5,9 +5,28 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 sparql = SPARQLWrapper("http://query.wikidata.org/sparql")
 
-def wikiSearch(url):
+def encodeSearchWord(searchString):
+	'''
+	All queries need to be transformed following the HTML syntax
+	'''
+	return searchString.replace(" ", "%20").lower()
+
+def encodeWikipediaName(entryName):
+	'''
+	Wikipedia entries follows the following syntax: This_is_an_example
+	Underscores need to be added instead of spaces.
+	'''
+	return "_".join(entryName.split(" "))
+
+def findInfo(keyword, lang="it"):
+	'''
+	In order to find as much works as possible, we need a good search system, the one provided
+	by Wikipedia itself is good enough to search for free text and return the desired result.
+	Entries can be searched in Italian
+	'''
+	url = "https://{}.wikipedia.org/w/api.php?action=query&list=search&srsearch={}&utf8=&format=json".format(lang, keyword)
 	response = requests.get(url)
-	toBeRuturned = {"gotResult": False, "title": "", "pageID": 0}
+	toBeRuturned = {"gotResult": False, "title": "", "pageID": 0, "lang":lang}
 	# Check connection status code
 	if (response.status_code == 200):
 		content = response.json()
@@ -18,68 +37,92 @@ def wikiSearch(url):
 			toBeRuturned["gotResult"] = True
 			toBeRuturned["title"] = content["query"]["search"][0]["title"]
 			toBeRuturned["pageID"] = content["query"]["search"][0]["pageid"]
-		else:
-			print("No data returned for query")
 	else:
 		print("Error while calling Wikipedia API")
 	return toBeRuturned
 
-def encodeSearchWord(searchString):
+def ontoSearch(keyword, lang="it"):
 	'''
-	All queries need to be transformed following the HTML syntax
+	This is used to convert the Title of the page found with 'findInfo' function into the
+	correspondent ontology page, so we can grab the ontology ID for the searched entry
 	'''
-	return searchString.replace(" ", "%20").lower()
-
-def wikiOntology(curID, language="en"):
-	'''
-	Wikipedia offers an ontology where we can get data from, unfortunately this info is only 
-	provided in the HTML source code, so we need to parse it.
-	'''
-	response = requests.get("https://{}.wikipedia.org/?curid={}".format(language, curID))
-	if (response.status_code == 200):
-		content = response.text
-		soup = bs(content, features="lxml")
-		ontologyInfo = soup.find("script", {"type": "application/ld+json"}).string
-		ontologyJSON = json.loads(ontologyInfo)
-		return ontologyJSON["mainEntity"].split("/")[-1]
+	url = "https://www.wikidata.org/wiki/Special:ItemByTitle?site={}wiki&page={}".format(lang, encodeWikipediaName(keyword))
+	newURL = requests.get(url, allow_redirects=True)
+	if (newURL.status_code == 200):
+		return newURL.url.split("/")[-1]
 	return None
 
-def wikiSections(curID, language="en"):
+def wikiOntology(ontoID):
+	'''
+	Wikidata offers an ontology where we can get data from, unfortunately reference
+	to its content to Wikipedia can only be found on JSON version of ontology.
+	This method allow to gather all links for every available language for a specific entry
+	'''
+	response = requests.get("https://www.wikidata.org/wiki/Special:EntityData/{}.json".format(ontoID))
+	data = []
+	if (response.status_code == 200):
+		content = response.json()
+		references = content["entities"][ontoID]["sitelinks"]
+		for reference in references:
+			lang = references[reference]["site"].split("wiki")[0]
+			title = references[reference]["title"]
+			url =  references[reference]["url"]
+			dataDict = {"language": lang, "title": title, "url": url}
+			data.append(dataDict)
+	return data
+
+
+def desiredLanguage(urls, langs=["it", "en"]):
+	'''
+	It allows to extract Wikipedia links only for desired languages, at this point English is preferred
+	as it will be easier to work with IA, if English is not available then Italian content link will be 
+	used.
+	'''
+	for language in urls:
+		if (language["language"] == "en"):
+			return language
+		if (language["language"] == "it"):
+			return language
+	return None
+
+def extractSections(soup):
+	toclevel = soup.findAll("li", attrs={"class": "tocsection-1"})
+	sectionList = []
+	for toc in toclevel:
+		rawText = toc.findAll("span", attrs={"class":"toctext"})
+		for section in rawText:
+			sectionList.append(section.text)
+	return sectionList
+
+
+def wikiSections(pageName, language):
 	'''
 	We need to understand how a Wikipedia page is made, we need to understand if we have a 'Description' field, then retrieve index numbers we need.
 	This includes a little dirty hack to retrieve subsection of 'Description' as there is no way to straightly retrieve them 
 	'''
-	response = requests.get("https://{}.wikipedia.org/w/api.php?action=parse&format=json&pageid={}&prop=sections&disabletoc=1".format(language, curID))
+	response = requests.get("https://{}.wikipedia.org/w/api.php?action=parse&format=json&page={}&prop=sections&disabletoc=1".format(language, pageName))
 	needed = []
 	if (response.status_code == 200):
 		content = response.json()["parse"]
-		isSectionFound = False
-		numberMacroSection = None
+		pageID = content["pageid"]
 		for section in content["sections"]:
-			lineName = section["line"]
-			number = section["number"] 
-			index = section["index"]
-			if ("description" in section["line"].lower()):
-				isSectionFound = True
-				numberMacroSection = number
-			if (isSectionFound):
-				if (number[0] == numberMacroSection[0]):
-					needed.append({int(index):lineName})
-	return needed
+			# We want to take only the first section, that means that number "1" or "1.x" need to be there
+			if (section["number"] == "1" or "1." in section["number"]):
+				needed.append({section["number"]:section["line"]})
+	return pageID, needed
 
-def wikiSectionContent(curID, sections, language="en"):
+def wikiSectionContent(pageName, pageID, sections, language):
 	'''
 	We need to extract sections from Wikipedia, as we have to use this API to retrieve single section, we need to manually
 	parse text from sections, for this we need to use a dirty hack e.g. regex. Sources from Wikipedia can have just a single
 	element e.g. 'Description' or can have various subsections
 	'''
-	response = requests.get("https://{}.wikipedia.org/w/api.php?action=query&format=json&pageids={}&prop=extracts&explaintext".format(language, curID))
+	response = requests.get("https://{}.wikipedia.org/w/api.php?action=query&format=json&titles={}&prop=extracts&explaintext".format(language, pageName))
 	contents = []
 	if (response.status_code == 200):
 		sectionNames = [list(x.values())[0] for x in sections]
-		print(sectionNames)
 		content = response.json()
-		text = content["query"]["pages"][str(curID)]["extract"]
+		text = content["query"]["pages"][str(pageID)]["extract"]
 		splittedText = re.split(r'\r?\n\n\n', text)
 		for x in splittedText:
 			search = re.match(r'==?= (.*?) ==?=', x)
@@ -100,9 +143,9 @@ def querySparql(wd, wdt):
 		SELECT ?o ?label WHERE {
 			wd:""" + wd + """ wdt:""" + wdt + """ ?o .
 			?o rdfs:label ?label .
-			FILTER (langMatches( lang(?label), "EN" ) )
+			FILTER (langMatches( lang(?label), "IT" ) )
 			SERVICE wikibase:label {
-				bd:serviceParam wikibase:language "EN" .
+				bd:serviceParam wikibase:language "IT" .
 			}
 		}
 
@@ -111,30 +154,43 @@ def querySparql(wd, wdt):
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
 
+	res = []
 	for result in results["results"]["bindings"]:
-		return (result["label"]["value"])
-
+		res.append(result["label"]["value"])
+	return res
 
 def main():
-	search = "St. Mark rescues a Sarracen"
-	url = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={}&utf8=&format=json".format(encodeSearchWord(search))
-	preliminarSearch = wikiSearch(url)
-	if (preliminarSearch["gotResult"]):
-		print("The content '{}' was found with pageID {}".format(preliminarSearch["title"], preliminarSearch["pageID"]))
-
-		sections = wikiSections(preliminarSearch["pageID"])
-		print("Description sections found:\n{}".format(sections))
-
-		#print(wikiSectionContent(preliminarSearch["pageID"], sections))
-		wikiOntReference = wikiOntology(preliminarSearch["pageID"])
-		print("Found ontology reference: {}".format(wikiOntReference))
-		end = querySparql(wikiOntReference, "P135")
-		print("'{}' belongs to {}".format(preliminarSearch["title"], end))
-
-def prova():
-	querySparql("Q25729", "P135")
+	keyword = "ultima cena leonardo"
+	#keyword = "San Marco salva saraceno"
+	#keyword = "la persistenza della memoria"
+	info = findInfo(keyword)
+	if (info["gotResult"]):
+		title = info["title"]
+		lang = info["lang"]
+		pageID = info["pageID"]
+		print("Got result from Wikipedia Search:\n\nTitle: {}\nLanguage: {}\nPage ID: {}".format(title, lang, pageID))
+		print("\nLooking for ontology ID...\n")
+		ontoID = ontoSearch(info["title"])
+		if (ontoID):
+			print("Ontology ID: {}\n".format(ontoID))
+			ontologyContent = wikiOntology(ontoID)
+			prefLang = desiredLanguage(ontologyContent)
+			print(prefLang)
+			sections = wikiSections(encodeWikipediaName(prefLang["title"]), prefLang["language"])
+			print(sections)
+			content = wikiSectionContent(encodeWikipediaName(prefLang["title"]), sections[0], sections[1], prefLang["language"])
+			print(content)
+			movement = querySparql(ontoID, "P135")
+			if (len(movement) > 0):
+				print("\n'{}' belongs to '{}' movement.\n".format(title, movement[0]))
+			depicts = querySparql(ontoID, "P180")
+			if (len(depicts) > 0):
+				print("Depicts: {}\n".format(", ".join(depicts)))
+		else:
+			print("Ontology ID could not be found")
+	else:
+		print("No Wikipedia entry found")
 
 if __name__ == "__main__":
-	#prova()
 	main()
 
