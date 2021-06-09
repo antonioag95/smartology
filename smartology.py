@@ -159,6 +159,25 @@ def querySparql(wd, wdt):
 		res.append(result["label"]["value"])
 	return res
 
+
+def extractCulturalMovement(keyword):
+	info = findInfo(keyword)
+	if (info["gotResult"]):
+		title = info["title"]
+		lang = info["lang"]
+		pageID = info["pageID"]
+		print("Got result from Wikipedia Search:\n\nTitle: {}\nLanguage: {}\nPage ID: {}".format(title, lang, pageID))
+		print("\nLooking for ontology ID...\n")
+		ontoID = ontoSearch(info["title"])
+		if (ontoID):
+			print("Ontology ID: {}\n".format(ontoID))
+			ontologyContent = wikiOntology(ontoID)
+			movement = querySparql(ontoID, "P135")
+			if (len(movement) > 0):
+				print("\n'{}' belongs to '{}' movement.\n".format(title, movement[0]))
+				return movement[0]
+	return None
+
 def main():
 	keyword = "ultima cena leonardo"
 	#keyword = "San Marco salva saraceno"
