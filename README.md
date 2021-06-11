@@ -9,6 +9,6 @@ In this example we want to implement Italian ArCo (Architettura della Conoscenza
 ## Members
 <img src="https://avatars.githubusercontent.com/u/30556866?s=25&v=45" width="25"> [antonioag95](https://github.com/antonioag95) <br />
 <img src="https://avatars.githubusercontent.com/u/77782240?s=25&v=4" width="25"> [LuanaBulla](https://github.com/LuanaBulla) <br />
-<img src="https://avatars.githubusercontent.com/u/77782240?s=25&v=4" width="25"> [LucaFailla](https://github.com/) <br />
+<img src="https://avatars.githubusercontent.com/u/78732912?s=25&v=4" width="25"> [LucaFailla](https://github.com/) <br />
 
  
