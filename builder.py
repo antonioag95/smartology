@@ -4,11 +4,15 @@ from rdflib import Namespace
 
 arcoSD = Namespace("https://domain/smartology/semiotic-description/")
 arco = Namespace("https://w3id.org/arco/ontology/arco/")
+arcoCd = Namespace("https://w3id.org/arco/ontology/context-description/")
+AGID=Namespace("https://w3id.org/italia/onto/TI/")
 
 #Create a graph
 g = Graph()
 g.bind("arco", arco)
 g.bind("s-sd", arcoSD)
+g.bind("a-cd",arcoCd)
+g.bind("dc", DC)
 
 def semioticDescription():
 	# Semiotic Description
@@ -168,7 +172,35 @@ def denotativeDescription():
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
+def CulturalMovement(ontology):
+	#Cultural Movement
+	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
+	g.add((DC.title, RDFS.range, XSD.string))
+	g.add((DC.title, RDFS.domain, arcoSD.CulturalMovement))
 
+	g.add((DC.description, RDFS.range, XSD.string))
+	g.add((DC.description, RDFS.domain, arcoSD.CulturalMovement))
+
+	g.add((DC.location, RDFS.range, XSD.string))
+	g.add((DC.location, RDFS.domain, arcoSD.CulturalMovement))
+
+	g.add((DC.source, RDFS.range, XSD.string))
+	g.add((DC.source, RDFS.domain, arcoSD.CulturalMovement))
+	
+	g.add((AGID.TimeInterval, RDFS.subClassOf, arcoSD.CulturalMovement))
+	g.add((arcoCd.startTime, RDFS.range, XSD.string))
+	g.add((arcoCd.startTime, RDFS.domain, AGID.TimeInterval))
+
+	g.add((arcoCd.endTime, RDFS.range, XSD.string))
+	g.add((arcoCd.endTime, RDFS.domain, AGID.TimeInterval))
+
+	g.add((arcoSD.hasTimeInterval, RDFS.range, AGID.TimeInterval))
+	g.add((arcoSD.hasTimeInterval, RDFS.domain, arcoSD.CulturalMovement))
+	
+	ont = g.serialize(format='turtle').decode("utf-8")
+	return ont
+	
+	
 def saveToFile(ontology):
 	with open("ontology.ttl", "w") as ontFile:
 		ontFile.write(ontology)
