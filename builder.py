@@ -5,7 +5,7 @@ from rdflib import Namespace
 arcoSD = Namespace("https://domain/smartology/semiotic-description/")
 arco = Namespace("https://w3id.org/arco/ontology/arco/")
 arcoCd = Namespace("https://w3id.org/arco/ontology/context-description/")
-AGID=Namespace("https://w3id.org/italia/onto/TI/")
+AGID = Namespace("https://w3id.org/italia/onto/TI/")
 
 #Create a graph
 g = Graph()
