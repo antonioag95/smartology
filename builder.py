@@ -172,28 +172,38 @@ def denotativeDescription():
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
-def CulturalMovement(ontology):
+def culturalMovement(ontology):
 	#Cultural Movement
 	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
-	g.add((DC.title, RDFS.range, XSD.string))
+
+	g.add((DC.title, RDF.type, OWL.DatatypeProperty))
+	g.add((DC.title, RDFS.range, RDFS.Literal))
 	g.add((DC.title, RDFS.domain, arcoSD.CulturalMovement))
 
-	g.add((DC.description, RDFS.range, XSD.string))
+	g.add((DC.description, RDF.type, OWL.DatatypeProperty))
+	g.add((DC.description, RDFS.range, RDFS.Literal))
 	g.add((DC.description, RDFS.domain, arcoSD.CulturalMovement))
 
-	g.add((DC.location, RDFS.range, XSD.string))
+	g.add((DC.location, RDF.type, OWL.DatatypeProperty))
+	g.add((DC.location, RDFS.range, RDFS.Literal))
 	g.add((DC.location, RDFS.domain, arcoSD.CulturalMovement))
 
-	g.add((DC.source, RDFS.range, XSD.string))
+	g.add((DC.source, RDF.type, OWL.DatatypeProperty))
+	g.add((DC.source, RDFS.range, RDFS.Literal))
 	g.add((DC.source, RDFS.domain, arcoSD.CulturalMovement))
 	
+	g.add((AGID.TimeInterval, RDF.type, OWL.Class))
 	g.add((AGID.TimeInterval, RDFS.subClassOf, arcoSD.CulturalMovement))
-	g.add((arcoCd.startTime, RDFS.range, XSD.string))
+
+	g.add((arcoCd.startTime, RDF.type, OWL.DatatypeProperty))
+	g.add((arcoCd.startTime, RDFS.range, RDFS.Literal))
 	g.add((arcoCd.startTime, RDFS.domain, AGID.TimeInterval))
 
-	g.add((arcoCd.endTime, RDFS.range, XSD.string))
+	g.add((arcoCd.endTime, RDF.type, OWL.DatatypeProperty))
+	g.add((arcoCd.endTime, RDFS.range, RDFS.Literal))
 	g.add((arcoCd.endTime, RDFS.domain, AGID.TimeInterval))
 
+	g.add((arcoSD.hasTimeInterval, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasTimeInterval, RDFS.range, AGID.TimeInterval))
 	g.add((arcoSD.hasTimeInterval, RDFS.domain, arcoSD.CulturalMovement))
 	
@@ -209,7 +219,8 @@ def main():
 	semioticDescription()
 	connotativeDescription()
 	expressiveDescription()
-	complete = denotativeDescription()
+	denotativeDescription()
+	complete = culturalMovement()
 	saveToFile(complete)
 
 if __name__ == "__main__":
