@@ -1,5 +1,5 @@
 from rdflib import Graph, Literal, RDF, URIRef
-from rdflib.namespace import RDF, RDFS, OWL, XSD
+from rdflib.namespace import RDF, RDFS, OWL, XSD, DC
 from rdflib import Namespace
 
 arcoSD = Namespace("https://domain/smartology/semiotic-description/")
@@ -15,47 +15,48 @@ g.bind("a-cd",arcoCd)
 g.bind("dc", DC)
 
 def semioticDescription():
-    	# Semiotic Description
-    	g.add((arcoSD.hasWikiDescription, RDF.type, OWL.DatatypeProperty))
-    	g.add((arcoSD.hasWikiDescription, RDFS.domain, arco.CulturalProperty))
-    	g.add((arcoSD.hasWikiDescription, RDFS.range, RDFS.Literal))
-    	
-    	g.add((arco.CulturalProperty, RDF.type, OWL.Class))
-    	
-    	g.add((arcoSD.hasSemioticDescription, RDF.type, OWL.ObjectProperty))
-    	g.add((arcoSD.hasSemioticDescription, RDFS.domain, arco.CulturalProperty))
-    	g.add((arcoSD.hasSemioticDescription, RDFS.range, arcoSD.SemioticDescription))
-    	
-    	g.add((arcoSD.SemioticDescription, RDF.type, OWL.Class))
-    	g.add((arcoSD.SemioticDescription, RDFS.subClassOf, arco.CulturalProperty))
-    	
-    	g.add((arcoSD.hasExpressiveDescription, RDF.type, OWL.ObjectProperty))
-    	g.add((arcoSD.hasExpressiveDescription, RDFS.domain, arcoSD.SemioticDescription))
-    	g.add((arcoSD.hasExpressiveDescription, RDFS.range, arcoSD.ExpressiveDescription))
-    	
-    	g.add((arcoSD.ExpressiveDescription, RDF.type, OWL.Class))
-    	g.add((arcoSD.ExpressiveDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
-    	
-    	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.ObjectProperty))
-    	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
-    	g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
-    	
-    	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
-    	g.add((arcoSD.CulturalMovement, RDFS.subClassOf, arco.CulturalProperty))
-    	
-    	g.add((arcoSD.hasConnotativeDescription, RDF.type, OWL.ObjectProperty))
-    	g.add((arcoSD.hasConnotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
-    	g.add((arcoSD.hasConnotativeDescription, RDFS.range, arcoSD.ConnotativeDescription))
-    	
-    	g.add((arcoSD.ConnotativeDescription, RDF.type, OWL.Class))
-    	g.add((arcoSD.ConnotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
-    	
-    	g.add((arcoSD.hasDenotativeDescription, RDF.type, OWL.ObjectProperty))
-    	g.add((arcoSD.hasDenotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
-    	g.add((arcoSD.hasDenotativeDescription, RDFS.range, arcoSD.DenotativeDescription))
-    	
-    	g.add((arcoSD.DenotativeDescription, RDF.type, OWL.Class))
-    	g.add((arcoSD.DenotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
+	# Semiotic Description
+	g.add((arcoSD.hasWikiDescription, RDF.type, OWL.DatatypeProperty))
+	g.add((arcoSD.hasWikiDescription, RDFS.domain, arco.CulturalProperty))
+	g.add((arcoSD.hasWikiDescription, RDFS.range, RDFS.Literal))
+		
+	g.add((arco.CulturalProperty, RDF.type, OWL.Class))
+		
+	g.add((arcoSD.hasSemioticDescription, RDF.type, OWL.ObjectProperty))
+	g.add((arcoSD.hasSemioticDescription, RDFS.domain, arco.CulturalProperty))
+	g.add((arcoSD.hasSemioticDescription, RDFS.range, arcoSD.SemioticDescription))
+		
+	g.add((arcoSD.SemioticDescription, RDF.type, OWL.Class))
+	g.add((arcoSD.SemioticDescription, RDFS.subClassOf, arco.CulturalProperty))
+		
+	g.add((arcoSD.hasExpressiveDescription, RDF.type, OWL.ObjectProperty))
+	g.add((arcoSD.hasExpressiveDescription, RDFS.domain, arcoSD.SemioticDescription))
+	g.add((arcoSD.hasExpressiveDescription, RDFS.range, arcoSD.ExpressiveDescription))
+		
+	g.add((arcoSD.ExpressiveDescription, RDF.type, OWL.Class))
+	g.add((arcoSD.ExpressiveDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
+		
+	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.ObjectProperty))
+	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
+	g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
+		
+	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
+	g.add((arcoSD.CulturalMovement, RDFS.subClassOf, arco.CulturalProperty))
+		
+	g.add((arcoSD.hasConnotativeDescription, RDF.type, OWL.ObjectProperty))
+	g.add((arcoSD.hasConnotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
+	g.add((arcoSD.hasConnotativeDescription, RDFS.range, arcoSD.ConnotativeDescription))
+		
+	g.add((arcoSD.ConnotativeDescription, RDF.type, OWL.Class))
+	g.add((arcoSD.ConnotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
+		
+	g.add((arcoSD.hasDenotativeDescription, RDF.type, OWL.ObjectProperty))
+	g.add((arcoSD.hasDenotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
+	g.add((arcoSD.hasDenotativeDescription, RDFS.range, arcoSD.DenotativeDescription))
+		
+	g.add((arcoSD.DenotativeDescription, RDF.type, OWL.Class))
+	g.add((arcoSD.DenotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
+	
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
@@ -169,7 +170,7 @@ def denotativeDescription():
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
-def culturalMovement(ontology):
+def culturalMovement():
 	#Cultural Movement
 	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
 
@@ -222,3 +223,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
