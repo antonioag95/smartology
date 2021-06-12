@@ -139,21 +139,52 @@ def expressiveDescription():
 
 def denotativeDescription():
 	# Denotative description
+	g.add((arcoSD.Iconic, RDF.type, OWL.NamedIndividual))
+	g.add((arcoSD.Iconic,RDF.type,arcoSD.DenotativeTypeDefinition))
+
+	g.add((arcoSD.Figurative, RDF.type, OWL.NamedIndividual))
+	g.add((arcoSD.Figurative,RDF.type,arcoSD.DenotativeTypeDefinition))
+
+	g.add((arcoSD.Abstract, RDF.type, OWL.NamedIndividual))
+	g.add((arcoSD.Abstract,RDF.type,arcoSD.DenotativeTypeDefinition))
+
+	g.add((arcoSD.Symmetrical, RDF.type, OWL.NamedIndividual))
+	g.add((arcoSD.Symmetrical,RDF.type,arcoSD.ElemetsRelationshipsType))
+
+	g.add((arcoSD.Asymmetrical, RDF.type, OWL.NamedIndividual))
+	g.add((arcoSD.Asymmetrical,RDF.type,arcoSD.ElemetsRelationshipsType))
+
 	g.add((arcoSD.DenotativeDescription, RDF.type, OWL.Class))
-	g.add((arcoSD.hasDenotativeTypeDefinition, RDF.type, OWL.DatatypeProperty))
+
+	g.add((arcoSD.DenotativeTypeDefinition, RDF.type, OWL.Class))
+	g.add((arcoSD.DenotativeTypeDefinition, RDFS.subClassOf, arcoSD.DenotativeDescription))
+
+	g.add((arcoSD.ElemetsRelationshipsType, RDF.type, OWL.Class))
+	g.add((arcoSD.ElemetsRelationshipsType, RDFS.subClassOf, arcoSD.ElementRelationships))
+
+	g.add((arcoSD.hasDenotativeTypeDefinition, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasDenotativeTypeDefinition, RDFS.domain, arcoSD.DenotativeDescription))
-	g.add((arcoSD.hasDenotativeTypeDefinition, RDFS.range, RDFS.Literal))
+	g.add((arcoSD.hasDenotativeTypeDefinition, RDFS.range, arcoSD.DenotativeTypeDefinition))
+	g.add((arcoSD.hasDenotativeTypeDefinition, OWL.inverseOf, arcoSD.isDenotativeTypeDefinitionOf))
+	g.add((arcoSD.isDenotativeTypeDefinitionOf, RDFS.domain, arcoSD.DenotativeTypeDefinition))
+	g.add((arcoSD.isDenotativeTypeDefinitionOf, RDFS.range, arcoSD.DenotativeDescription))
+	g.add((arcoSD.isDenotativeTypeDefinitionOf, OWL.inverseOf, arcoSD.hasDenotativeTypeDefinition))
 
 	g.add((arcoSD.hasScene, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasScene, RDFS.domain, arcoSD.DenotativeDescription))
 	g.add((arcoSD.hasScene, RDFS.range, arcoSD.Scene))
+	g.add((arcoSD.hasScene, OWL.inverseOf, arcoSD.isSceneOf))
+	g.add((arcoSD.isSceneOf, RDFS.domain, arcoSD.Scene))
+	g.add((arcoSD.isSceneOf, RDFS.range, arcoSD.DenotativeDescription))
+	g.add((arcoSD.isSceneOf, OWL.inverseOf, arcoSD.hasScene))
 
 	g.add((arcoSD.Scene, RDF.type, OWL.Class))
 	g.add((arcoSD.Scene, RDFS.subClassOf, arcoSD.DenotativeDescription))
-	
+
 	g.add((arcoSD.hasDescriptionScene, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasDescriptionScene, RDFS.domain, arcoSD.Scene))
 	g.add((arcoSD.hasDescriptionScene, RDFS.range, RDFS.Literal))
+
 	g.add((arcoSD.hasEnvironment, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasEnvironment, RDFS.domain, arcoSD.Scene))
 	g.add((arcoSD.hasEnvironment, RDFS.range, RDFS.Literal))
@@ -161,6 +192,10 @@ def denotativeDescription():
 	g.add((arcoSD.hasComposition, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasComposition, RDFS.domain, arcoSD.DenotativeDescription))
 	g.add((arcoSD.hasComposition, RDFS.range, arcoSD.Composition))
+	g.add((arcoSD.hasComposition, OWL.inverseOf, arcoSD.isCompositionOf))
+	g.add((arcoSD.isCompositionOf, RDFS.domain, arcoSD.Composition))
+	g.add((arcoSD.isCompositionOf, RDFS.range, arcoSD.DenotativeDescription))
+	g.add((arcoSD.isCompositionOf, OWL.inverseOf, arcoSD.hasComposition))
 
 	g.add((arcoSD.Composition, RDF.type, OWL.Class))
 	g.add((arcoSD.Composition, RDFS.subClassOf, arcoSD.DenotativeDescription))
@@ -172,6 +207,10 @@ def denotativeDescription():
 	g.add((arcoSD.hasElementsComposition, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasElementsComposition, RDFS.domain, arcoSD.Composition))
 	g.add((arcoSD.hasElementsComposition, RDFS.range, arcoSD.ElementsComposition))
+	g.add((arcoSD.hasElementsComposition, OWL.inverseOf, arcoSD.isElementsCompositionOf))
+	g.add((arcoSD.isElementsCompositionOf, RDFS.domain, arcoSD.ElementsComposition))
+	g.add((arcoSD.isElementsCompositionOf, RDFS.range, arcoSD.Composition))
+	g.add((arcoSD.isElementsCompositionOf, OWL.inverseOf, arcoSD.hasElementsComposition))
 
 	g.add((arcoSD.ElementsComposition, RDF.type, OWL.Class))
 	g.add((arcoSD.ElementsComposition, RDFS.subClassOf, arcoSD.Composition))
@@ -187,6 +226,10 @@ def denotativeDescription():
 	g.add((arcoSD.hasRelationsComposition, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasRelationsComposition, RDFS.domain, arcoSD.Composition))
 	g.add((arcoSD.hasRelationsComposition, RDFS.range, arcoSD.RelationsComposition))
+	g.add((arcoSD.hasRelationsComposition, OWL.inverseOf, arcoSD.isRelationsCompositionOf))
+	g.add((arcoSD.isRelationsCompositionOf, RDFS.domain, arcoSD.RelationsComposition))
+	g.add((arcoSD.isRelationsCompositionOf, RDFS.range, arcoSD.Composition))
+	g.add((arcoSD.isRelationsCompositionOf, OWL.inverseOf, arcoSD.hasRelationsComposition))
 
 	g.add((arcoSD.RelationsComposition, RDF.type, OWL.Class))
 	g.add((arcoSD.RelationsComposition, RDFS.subClassOf, arcoSD.Composition))
@@ -198,13 +241,21 @@ def denotativeDescription():
 	g.add((arcoSD.hasElementRelationships, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasElementRelationships, RDFS.domain, arcoSD.RelationsComposition))
 	g.add((arcoSD.hasElementRelationships, RDFS.range, arcoSD.ElementRelationships))
+	g.add((arcoSD.hasElementRelationships, OWL.inverseOf, arcoSD.isElementRelationshipsOf))
+	g.add((arcoSD.isElementRelationshipsOf, RDFS.domain, arcoSD.ElementRelationships))
+	g.add((arcoSD.isElementRelationshipsOf, RDFS.range, arcoSD.RelationsComposition))
+	g.add((arcoSD.isElementRelationshipsOf, OWL.inverseOf, arcoSD.hasElementRelationships))
 
 	g.add((arcoSD.ElementRelationships, RDF.type, OWL.Class))
 	g.add((arcoSD.ElementRelationships, RDFS.subClassOf, arcoSD.RelationsComposition))
 
-	g.add((arcoSD.hasElementRelationshipsType, RDF.type, OWL.DatatypeProperty))
+	g.add((arcoSD.hasElementRelationshipsType, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasElementRelationshipsType, RDFS.domain, arcoSD.ElementRelationships))
-	g.add((arcoSD.hasElementRelationshipsType, RDFS.range, RDFS.Literal))
+	g.add((arcoSD.hasElementRelationshipsType, RDFS.range, arcoSD.ElemetsRelationshipsType))
+	g.add((arcoSD.hasElementRelationshipsType, OWL.inverseOf, arcoSD.isElementRelationshipsTypeOf))
+	g.add((arcoSD.isElementRelationshipsTypeOf, RDFS.domain, arcoSD.ElemetsRelationshipsType))
+	g.add((arcoSD.isElementRelationshipsTypeOf, RDFS.range, arcoSD.ElementRelationships))
+	g.add((arcoSD.isElementRelationshipsTypeOf, OWL.inverseOf, arcoSD.hasElementRelationshipsType))
 
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
