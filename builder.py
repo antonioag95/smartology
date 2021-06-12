@@ -82,23 +82,39 @@ def semioticDescription():
 	return ont
 
 def connotativeDescription():
-	# Connotative Description
+	#ConnotativeDescription
 	g.add((arcoSD.ConnotativeDescription, RDF.type, OWL.Class))
 	g.add((arcoSD.Interpretation, RDF.type, OWL.Class))
 	g.add((arcoSD.Interpretation, RDFS.subClassOf, arcoSD.ConnotativeDescription))
+
 	g.add((arcoSD.hasInterpretation, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasInterpretation, RDFS.domain, arcoSD.ConnotativeDescription))
 	g.add((arcoSD.hasInterpretation, RDFS.range, arcoSD.Interpretation))
+	g.add((arcoSD.hasInterpretation, OWL.inverseOf, arcoSD.isInterpretationOf))
+	g.add((arcoSD.isInterpretationOf, RDFS.domain, arcoSD.Interpretation))
+	g.add((arcoSD.isInterpretationOf, RDFS.range, arcoSD.ConnotativeDescription))
+	g.add((arcoSD.isInterpretationOf, OWL.inverseOf, arcoSD.hasInterpretation))
+
 	g.add((arcoSD.hasMessageInterpretation, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasMessageInterpretation, RDFS.domain, arcoSD.Interpretation))
 	g.add((arcoSD.hasMessageInterpretation, RDFS.range, arcoSD.Message))
+	g.add((arcoSD.hasMessageInterpretation, OWL.inverseOf, arcoSD.isMessageInterpretationOf))
+	g.add((arcoSD.isMessageInterpretationOf, RDFS.domain, arcoSD.Message))
+	g.add((arcoSD.isMessageInterpretationOf, RDFS.range, arcoSD.Interpretation))
+	g.add((arcoSD.isMessageInterpretationOf, OWL.inverseOf, arcoSD.hasMessageInterpretation))
+
+
+	g.add((arcoSD.Message, RDF.type, OWL.Class))
 	g.add((arcoSD.Message, RDFS.subClassOf, arcoSD.Interpretation))
+
 	g.add((arcoSD.hasMessage, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasMessage, RDFS.domain, arcoSD.Message))
 	g.add((arcoSD.hasMessage, RDFS.range, RDFS.Literal))
+
 	g.add((arcoSD.hasSource, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasSource, RDFS.domain, arcoSD.Message))
 	g.add((arcoSD.hasSource, RDFS.range, RDFS.Literal))
+
 	g.add((arcoSD.hasTopic, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasTopic, RDFS.domain, arcoSD.Interpretation))
 	g.add((arcoSD.hasTopic, RDFS.range, RDFS.Literal))
@@ -109,14 +125,16 @@ def connotativeDescription():
 def expressiveDescription():
 	# Expressive Detection
 	g.add((arcoSD.ExpressiveDescription, RDF.type, OWL.Class))
+	
 	g.add((arcoSD.hasColour, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasColour, RDFS.domain, arcoSD.ExpressiveDescription))
 	g.add((arcoSD.hasColour, RDFS.range, RDFS.Literal))
+	
 	g.add((arcoSD.hasLights, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasLights, RDFS.domain, arcoSD.ExpressiveDescription))
 	g.add((arcoSD.hasLights, RDFS.range, RDFS.Literal))
+	
 	ont = g.serialize(format='turtle').decode("utf-8")
-
 	return ont
 
 def denotativeDescription():
