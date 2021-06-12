@@ -19,41 +19,62 @@ def semioticDescription():
 	g.add((arcoSD.hasWikiDescription, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasWikiDescription, RDFS.domain, arco.CulturalProperty))
 	g.add((arcoSD.hasWikiDescription, RDFS.range, RDFS.Literal))
-		
+
 	g.add((arco.CulturalProperty, RDF.type, OWL.Class))
-		
+
 	g.add((arcoSD.hasSemioticDescription, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasSemioticDescription, RDFS.domain, arco.CulturalProperty))
 	g.add((arcoSD.hasSemioticDescription, RDFS.range, arcoSD.SemioticDescription))
-		
+	g.add((arcoSD.hasSemioticDescription, OWL.inverseOf, arcoSD.isSemioticDescriptionOf))
+	g.add((arcoSD.isSemioticDescriptionOf, RDFS.domain, arcoSD.SemioticDescription))
+	g.add((arcoSD.isSemioticDescriptionOf, RDFS.range, arco.CulturalProperty))
+	g.add((arcoSD.isSemioticDescriptionOf, OWL.inverseOf, arcoSD.hasSemioticDescription))
+
 	g.add((arcoSD.SemioticDescription, RDF.type, OWL.Class))
 	g.add((arcoSD.SemioticDescription, RDFS.subClassOf, arco.CulturalProperty))
-		
+
 	g.add((arcoSD.hasExpressiveDescription, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasExpressiveDescription, RDFS.domain, arcoSD.SemioticDescription))
 	g.add((arcoSD.hasExpressiveDescription, RDFS.range, arcoSD.ExpressiveDescription))
-		
+	g.add((arcoSD.hasExpressiveDescription, OWL.inverseOf, arcoSD.isExpressiveDescriptionOf))
+	g.add((arcoSD.isExpressiveDescriptionOf, RDFS.domain, arcoSD.ExpressiveDescription))
+	g.add((arcoSD.isExpressiveDescriptionOf, RDFS.range, arcoSD.SemioticDescription))
+	g.add((arcoSD.isExpressiveDescriptionOf, OWL.inverseOf, arcoSD.hasExpressiveDescription))
+
+
 	g.add((arcoSD.ExpressiveDescription, RDF.type, OWL.Class))
 	g.add((arcoSD.ExpressiveDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
-		
+
 	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
 	g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
-		
+	g.add((arcoSD.hasCulturalMovement, OWL.inverseOf, arcoSD.isCulturalMovementOf))
+	g.add((arcoSD.isCulturalMovementOf, RDFS.domain, arcoSD.CulturalMovement))
+	g.add((arcoSD.isCulturalMovementOf, RDFS.range, arco.CulturalProperty))
+	g.add((arcoSD.isCulturalMovementOf, OWL.inverseOf, arcoSD.hasCulturalMovement))
+
 	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
 	g.add((arcoSD.CulturalMovement, RDFS.subClassOf, arco.CulturalProperty))
-		
+
 	g.add((arcoSD.hasConnotativeDescription, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasConnotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
 	g.add((arcoSD.hasConnotativeDescription, RDFS.range, arcoSD.ConnotativeDescription))
-		
+	g.add((arcoSD.hasConnotativeDescription, OWL.inverseOf, arcoSD.isConnotativeDescriptionOf))
+	g.add((arcoSD.isConnotativeDescriptionOf, RDFS.domain, arcoSD.ConnotativeDescription))
+	g.add((arcoSD.isConnotativeDescriptionOf, RDFS.range, arcoSD.SemioticDescription))
+	g.add((arcoSD.isConnotativeDescriptionOf, OWL.inverseOf, arcoSD.hasConnotativeDescription))
+
 	g.add((arcoSD.ConnotativeDescription, RDF.type, OWL.Class))
 	g.add((arcoSD.ConnotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
-		
+
 	g.add((arcoSD.hasDenotativeDescription, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasDenotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
 	g.add((arcoSD.hasDenotativeDescription, RDFS.range, arcoSD.DenotativeDescription))
-		
+	g.add((arcoSD.hasDenotativeDescription, OWL.inverseOf, arcoSD.isDenotativeDescriptionOf))
+	g.add((arcoSD.isDenotativeDescriptionOf, RDFS.domain, arcoSD.DenotativeDescription))
+	g.add((arcoSD.isDenotativeDescriptionOf, RDFS.range, arcoSD.SemioticDescription))
+	g.add((arcoSD.isDenotativeDescriptionOf, OWL.inverseOf, arcoSD.hasDenotativeDescription))
+
 	g.add((arcoSD.DenotativeDescription, RDF.type, OWL.Class))
 	g.add((arcoSD.DenotativeDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
 	
