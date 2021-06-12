@@ -7,7 +7,7 @@ We think that ontologies are not widespread because of the time that needs to be
 In this example we want to implement Italian ArCo (Architettura della Conoscenza) ontology by scraping data from various trusted sources from the Internet. Scraping is then used to implement QA techniques by using Artificial Intelligence (IA). In this context we use BERT, one of the most complete - as of now - pre-trained models that can be used for Natural Language Processing tasks.
 
 #### Taxonomy
-Taxonomy can be viewed [here](http://150.146.207.114/lode/extract?url=https%3A%2F%2Fraw.githubusercontent.com%2Fantonioag95%2Fsmartology%2Fmain%2Fsmartology.owl%3Ftoken%3DASRNZYC7KGFGUSOABJ6QJ5DAZYL4W&lang=en#d4e803)
+Taxonomy can be viewed [here](http://150.146.207.114/lode/extract?url=https%3A%2F%2Fraw.githubusercontent.com%2Fantonioag95%2Fsmartology%2Fmain%2Fsmartology.owl%3Ftoken%3DASRNZYC7KGFGUSOABJ6QJ5DAZYL4W&lang=en)
 
 ## Members
 <img src="https://avatars.githubusercontent.com/u/30556866?s=25&v=45" width="25"> [antonioag95](https://github.com/antonioag95) <br />
