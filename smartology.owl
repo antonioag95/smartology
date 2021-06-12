@@ -11,8 +11,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:s-sd="https://domain/smartology/semiotic-description/">
      <owl:Ontology rdf:about="https://domain/smartology/semiotic-description/">
-        <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1/">
-        <owl:imports rdf:resource="https://domain/smartology/semiotic-description/1.1">
+        <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
+        <owl:imports rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
         <dc:creator>Antonio Picone</dc:creator>
         <dc:creator>Luana Bulla</dc:creator>
         <dc:creator>Luca Failla</dc:creator>
