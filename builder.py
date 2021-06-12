@@ -225,6 +225,10 @@ def culturalMovement():
 	g.add((arcoSD.hasTimeInterval, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasTimeInterval, RDFS.range, AGID.TimeInterval))
 	g.add((arcoSD.hasTimeInterval, RDFS.domain, arcoSD.CulturalMovement))
+	g.add((arcoSD.hasTimeInterval, OWL.inverseOf, arcoSD.isTimeIntervalOf))
+	g.add((arcoSD.isTimeIntervalOf, RDFS.domain, AGID.TimeInterval))
+	g.add((arcoSD.isTimeIntervalOf, RDFS.range, arcoSD.CulturalMovement))
+	g.add((arcoSD.isTimeIntervalOf, OWL.inverseOf, arcoSD.hasTimeInterval)
 	
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
