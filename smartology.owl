@@ -10,7 +10,7 @@
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:s-sd="https://domain/smartology/semiotic-description/">
-     <owl:Ontology rdf:about="https://domain/smartology/semiotic-description/">
+     <owl:Ontology rdf:about="https://domain/smartology/semiotic-description">
         <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
         <owl:imports rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
         <dc:creator>Antonio Picone</dc:creator>
@@ -19,7 +19,7 @@
         <dc:description xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</dc:description>
         <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
         <rdfs:label xml:lang="en">Semiotic Description Ontology (Smartology network)</rdfs:label>
-    <Ontology/>
+    </owl:Ontology>
     
 
 
