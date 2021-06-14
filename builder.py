@@ -1,6 +1,7 @@
-from rdflib import Graph, Literal, RDF, URIRef
+from rdflib import Graph, Literal, RDF, URIRef, Namespace
 from rdflib.namespace import RDF, RDFS, OWL, XSD, DC
-from rdflib import Namespace
+
+BUILD_TAXONOMY = False
 
 arcoSD = Namespace("https://domain/smartology/semiotic-description/")
 arco = Namespace("https://w3id.org/arco/ontology/arco/")
@@ -303,17 +304,106 @@ def culturalMovement():
 	return ont
 	
 	
-def saveToFile(ontology):
-	with open("ontology.ttl", "w") as ontFile:
+def saveToFile(ontology, fileName):
+	with open("{}.ttl".format(fileName), "w") as ontFile:
 		ontFile.write(ontology)
 
-def main():
+def buildTaxonomy():
 	semioticDescription()
 	connotativeDescription()
 	expressiveDescription()
 	denotativeDescription()
 	complete = culturalMovement()
-	saveToFile(complete)
+	saveToFile(complete, "ontology")
+
+def addToOntology(resource):
+	for key, value in resource.items():
+		if (key == "resource"):
+			res = URIRef(value)
+			g.add((res, RDF.type, arco.CulturalProperty))
+		if (key == "subject"):
+			subject = value
+			g.add((res, arcoSD.hasSubject, Literal(subject)))
+		if (key == "scene"):
+			scene = value
+			g.add((res, arcoSD.hasDescriptionScene, Literal(scene)))
+		if (key == "environment"):
+			environment = value
+			g.add((res, arcoSD.hasEnvironment, Literal(environment)))
+		if (key == "foreground"):
+			foreground = value
+			g.add((res, arcoSD.hasForegroundElements, Literal(foreground)))
+		if (key == "background"):
+			background = value
+			g.add((res, arcoSD.hasBackgroundElements, Literal(background)))
+		if (key == "hasPerspectiveStudy"):
+			perspectiveStudy = value
+			g.add((res, arcoSD.hasPerspectiveStudy, Literal(perspectiveStudy)))
+		'''
+		if (key == "hasDescriptionRelations"):
+			# TO DO
+			descriptionRelations = value
+			g.add((res, arcoSD.hasPerspectiveStudy, Literal(perspectiveStudy)))
+		'''
+		if (key == "denotativeTypeDefinition"):
+			denotativeTypeDefinition = value
+			g.add((res, arcoSD.hasDenotativeTypeDefinition,arcoSD[denotativeTypeDefinition]))
+		if (key == "elementsRelationshipsType"):
+			elementsRelationshipsType = value
+			g.add((res, arcoSD.hasElementRelationshipsType,arcoSD[elementsRelationshipsType]))
+		if (key == "hasSource"):
+			hasSource = value
+			g.add((res, arcoSD.hasSource,Literal(hasSource)))
+		if (key == "hasMessage"):
+			hasMessage = value
+			g.add((res, arcoSD.hasMessage,Literal(hasMessage)))
+		if (key == "hasTopic"):
+			hasTopic = value
+			g.add((res, arcoSD.hasTopic,Literal(hasTopic)))
+		if (key == "hasLight"):
+			hasLight = value
+			g.add((res, arcoSD.hasLights,Literal(hasLight)))
+
+def main():
+	if (BUILD_TAXONOMY):
+		buildTaxonomy()
+	else:
+		#
+		dataToBeAdded = [
+							{
+								"resource": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900287181",
+								"subject": "The child Jesus, Mary, and Joseph",
+								"scene": "The Holy Family",
+								"environment": "The scene appears to be a rural one",
+								"foreground": "The Holy Family",
+								"background": "Five Nudes",
+								"hasPerspectiveStudy": "The exedra where the naked in the background reside lies on a different perspective surface and with a lower vanishing point compared to the laying surface of the main figures and the low wall under Joseph, which has the task of concealing the gap.",
+								"hasDescriptionRelations": "Mary is the most prominent figure in the composition, taking up much of the center of the image. Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family. Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne. Saint John the Baptist is in the middle-ground of the painting, between the Holy Family and the background.",
+								"denotativeTypeDefinition": "Figurative",
+								"elementsRelationshipsType": "Symmetrical",
+								"hasSource": "Wikipedia",
+								"hasTopic": "Holy Family"
+							},
+							{
+								"resource": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900281988",
+								"subject": "David",
+								"scene": "Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude",
+								"environment": "Hero standing victorious over the head of Goliath",
+								"foreground": "David",
+								"hasDescriptionRelations": "This is typified in David, as the figure stands with one leg holding its full weight and the other leg forward. This classic pose causes the figure's hips and shoulders to rest at opposing angles, giving a slight s-curve to the entire torso. The contrapposto is emphasized by the turn of the head to the left, and by the contrasting positions of the arms. The proportions of the David are atypical of Michelangelo's work; the figure has an unusually large head and hands (particularly apparent in the right hand). The small size of the genitals, though, is in line with his other works and with Renaissance conventions in general, perhaps referencing the ancient Greek ideal of pre-pubescent male nudity.",
+								"denotativeTypeDefinition": "Figurative",
+								"elementsRelationshipsType": "Symmetrical",
+								"hasSource": "Wikipedia",
+								"hasMessage": "It is possible that the David was conceived as a political statue before Michelangelo began to work on it. Certainly, David the giant-killer had long been seen as a political figure in Florence, and images of the Biblical hero already carried political implications there.",
+								"hasTopic": "David And Goliath"
+							}
+
+						]
+		g.parse("smartology.owl", format="xml")
+		for resource in dataToBeAdded:
+			addToOntology(resource)
+		saveToFile(g.serialize(format='turtle').decode("utf-8"), "test")
+
 
 if __name__ == "__main__":
 	main()
