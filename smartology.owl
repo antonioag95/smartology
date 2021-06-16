@@ -15,6 +15,7 @@
         <dc:creator>Luana Bulla</dc:creator>
         <dc:creator>Luca Failla</dc:creator>
         <dc:description xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</dc:description>
+        <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
         <rdfs:label xml:lang="en">Semiotic Description Ontology (Smartology network)</rdfs:label>
     </owl:Ontology>
     
