@@ -1,7 +1,8 @@
 from rdflib import Graph, Literal, RDF, URIRef, Namespace
 from rdflib.namespace import RDF, RDFS, OWL, XSD, DC
 
-BUILD_TAXONOMY = False
+BUILD_TAXONOMY = True
+TAXONOMY_FILE = "smartology"
 
 arcoSD = Namespace("https://domain/smartology/semiotic-description/")
 arco = Namespace("https://w3id.org/arco/ontology/arco/")
@@ -314,7 +315,7 @@ def buildTaxonomy():
 	expressiveDescription()
 	denotativeDescription()
 	complete = culturalMovement()
-	saveToFile(complete, "ontology")
+	saveToFile(complete, TAXONOMY_FILE)
 
 def addToOntology(resource):
 	for key, value in resource.items():
@@ -364,8 +365,21 @@ def addToOntology(resource):
 			hasLight = value
 			g.add((res, arcoSD.hasLights,Literal(hasLight)))
 
+def buildAuthorInfo():
+	ontologyIRI = URIRef("https://domain/smartology/semiotic-description")
+	# Add Ontology IRI
+	g.add((ontologyIRI, RDF.type, OWL.Ontology))
+	g.add((ontologyIRI, OWL.versionIRI, URIRef("https://domain/smartology/semiotic-description/1.1"))) 
+	g.add((ontologyIRI, DC.creator, Literal("Antonio Picone")))
+	g.add((ontologyIRI, DC.creator, Literal("Luana Bulla")))
+	g.add((ontologyIRI, DC.creator, Literal("Luca Failla")))
+	g.add((ontologyIRI, DC.description, Literal("The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.", lang="en")))
+	g.add((ontologyIRI, DC.title, Literal("Semiotic Description Ontology (Smartology network)", lang="en")))
+	g.add((ontologyIRI, RDFS.label, Literal("Semiotic Description Ontology (Smartology network)", lang="en")))
+
 def main():
 	if (BUILD_TAXONOMY):
+		buildAuthorInfo()
 		buildTaxonomy()
 	else:
 		#
@@ -399,7 +413,7 @@ def main():
 							}
 
 						]
-		g.parse("smartology.owl", format="xml")
+		g.parse("{}.owl".format(TAXONOMY_FILE), format="xml")
 		for resource in dataToBeAdded:
 			addToOntology(resource)
 		saveToFile(g.serialize(format='turtle').decode("utf-8"), "test")
