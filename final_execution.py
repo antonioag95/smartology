@@ -18,13 +18,6 @@ import spacy
 import requests, json, re
 from bs4 import BeautifulSoup as bs
 
-'''
-#Importare file .py da colab
-from google.colab import files
-src = list(files.upload().values())[0]
-open('mylib.py','wb').write(src)
-'''
-
 from data_extraction import Data_Extraction
 from Bert_Text_Processing import Information_Retrieval
 from smartology import findInfo, ontoSearch, desiredLanguage, wikiOntology, wikiSectionContent, wikiSections, querySparql, encodeWikipediaName
