@@ -1,1056 +1,740 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://domain/smartology/semiotic-description#"
      xml:base="https://domain/smartology/semiotic-description"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://domain/smartology/semiotic-description"
-     versionIRI="https://domain/smartology/semiotic-description/1.1">
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="arco" IRI="https://w3id.org/arco/ontology/arco/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="s-sd" IRI="https://domain/smartology/semiotic-description/"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Antonio Picone</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Luana Bulla</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Luca Failla</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">Semiotic Description Ontology (Smartology network)</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="/Composition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ConnotativeDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/CulturalMovement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/DenotativeDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/DenotativeTypeDefinition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ElementRelationships"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ElementsComposition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ElementsRelationshipsType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ExpressiveDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/Interpretation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/Message"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/RelationsComposition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/Scene"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/SemioticDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasComposition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasConnotativeDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasCulturalMovement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasDenotativeDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasElementRelationships"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasElementRelationshipsType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasElementsComposition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasExpressiveDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasInterpretation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasMessageInterpretation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasRelationsComposition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasScene"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasSemioticDescription"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="dc:location"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="dc:source"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="dc:title"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasBackgroundElements"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasColour"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasDescriptionScene"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasEndDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasEnvironment"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasForegroundElements"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasLights"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasMessage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasPerspectiveStudy"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasSource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasStartDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasSubject"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasTopic"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/hasWikiDescription"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Abstract"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Asymmetrical"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Figurative"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Iconic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Symmetrical"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isMessageInterpretationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isInterpretationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI=""/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isElementsCompositionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isRelationsCompositionOf"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isSceneOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isElementRelationshipsOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isCompositionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isCulturalMovementOf"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="/Composition"/>
-        <Class IRI="/DenotativeDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ConnotativeDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/CulturalMovement"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/DenotativeDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/DenotativeTypeDefinition"/>
-        <Class IRI="/DenotativeDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ElementRelationships"/>
-        <Class IRI="/RelationsComposition"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ElementsComposition"/>
-        <Class IRI="/Composition"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ElementsRelationshipsType"/>
-        <Class IRI="/ElementRelationships"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ExpressiveDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Interpretation"/>
-        <Class IRI="/ConnotativeDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Message"/>
-        <Class IRI="/Interpretation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/RelationsComposition"/>
-        <Class IRI="/Composition"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Scene"/>
-        <Class IRI="/DenotativeDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/SemioticDescription"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="/DenotativeTypeDefinition"/>
-        <NamedIndividual IRI="/Abstract"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/ElementsRelationshipsType"/>
-        <NamedIndividual IRI="/Asymmetrical"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/DenotativeTypeDefinition"/>
-        <NamedIndividual IRI="/Figurative"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/DenotativeTypeDefinition"/>
-        <NamedIndividual IRI="/Iconic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/ElementsRelationshipsType"/>
-        <NamedIndividual IRI="/Symmetrical"/>
-    </ClassAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dc:description"/>
-        <NamedIndividual IRI=""/>
-        <Literal xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dc:title"/>
-        <NamedIndividual IRI=""/>
-        <Literal xml:lang="en">Semiotic Description Ontology (Smartology network)</Literal>
-    </DataPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasComposition"/>
-        <ObjectProperty IRI="/isCompositionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasConnotativeDescription"/>
-        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasCulturalMovement"/>
-        <ObjectProperty IRI="/isCulturalMovementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasDenotativeDescription"/>
-        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
-        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasElementRelationships"/>
-        <ObjectProperty IRI="/isElementRelationshipsOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasElementRelationshipsType"/>
-        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasElementsComposition"/>
-        <ObjectProperty IRI="/isElementsCompositionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasExpressiveDescription"/>
-        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasInterpretation"/>
-        <ObjectProperty IRI="/isInterpretationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasMessageInterpretation"/>
-        <ObjectProperty IRI="/isMessageInterpretationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasRelationsComposition"/>
-        <ObjectProperty IRI="/isRelationsCompositionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasScene"/>
-        <ObjectProperty IRI="/isSceneOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasSemioticDescription"/>
-        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
-    </InverseObjectProperties>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasComposition"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasConnotativeDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasCulturalMovement"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasDenotativeDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasElementRelationships"/>
-        <Class IRI="/RelationsComposition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasElementRelationshipsType"/>
-        <Class IRI="/ElementRelationships"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasElementsComposition"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasExpressiveDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasInterpretation"/>
-        <Class IRI="/ConnotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasMessageInterpretation"/>
-        <Class IRI="/Interpretation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasRelationsComposition"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasScene"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasSemioticDescription"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isCompositionOf"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
-        <Class IRI="/ConnotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isCulturalMovementOf"/>
-        <Class IRI="/CulturalMovement"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
-        <Class IRI="/DenotativeTypeDefinition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isElementRelationshipsOf"/>
-        <Class IRI="/ElementRelationships"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
-        <Class IRI="/ElementsRelationshipsType"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isElementsCompositionOf"/>
-        <Class IRI="/ElementsComposition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
-        <Class IRI="/ExpressiveDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isInterpretationOf"/>
-        <Class IRI="/Interpretation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isMessageInterpretationOf"/>
-        <Class IRI="/Message"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isRelationsCompositionOf"/>
-        <Class IRI="/RelationsComposition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isSceneOf"/>
-        <Class IRI="/Scene"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasComposition"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasConnotativeDescription"/>
-        <Class IRI="/ConnotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasCulturalMovement"/>
-        <Class IRI="/CulturalMovement"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasDenotativeDescription"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
-        <Class IRI="/DenotativeTypeDefinition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasElementRelationships"/>
-        <Class IRI="/ElementRelationships"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasElementRelationshipsType"/>
-        <Class IRI="/ElementsRelationshipsType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasElementsComposition"/>
-        <Class IRI="/ElementsComposition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasExpressiveDescription"/>
-        <Class IRI="/ExpressiveDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasInterpretation"/>
-        <Class IRI="/Interpretation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasMessageInterpretation"/>
-        <Class IRI="/Message"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasRelationsComposition"/>
-        <Class IRI="/RelationsComposition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasScene"/>
-        <Class IRI="/Scene"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasSemioticDescription"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isCompositionOf"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isCulturalMovementOf"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isElementRelationshipsOf"/>
-        <Class IRI="/RelationsComposition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
-        <Class IRI="/ElementRelationships"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isElementsCompositionOf"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
-        <Class IRI="/SemioticDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isInterpretationOf"/>
-        <Class IRI="/ConnotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isMessageInterpretationOf"/>
-        <Class IRI="/Interpretation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isRelationsCompositionOf"/>
-        <Class IRI="/Composition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isSceneOf"/>
-        <Class IRI="/DenotativeDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="dc:description"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="dc:location"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="dc:source"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="dc:title"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasBackgroundElements"/>
-        <Class IRI="/ElementsComposition"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasColour"/>
-        <Class IRI="/ExpressiveDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasDescriptionScene"/>
-        <Class IRI="/Scene"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasEndDate"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasEnvironment"/>
-        <Class IRI="/Scene"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasForegroundElements"/>
-        <Class IRI="/ElementsComposition"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasLights"/>
-        <Class IRI="/ExpressiveDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasMessage"/>
-        <Class IRI="/Message"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasPerspectiveStudy"/>
-        <Class IRI="/RelationsComposition"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasSource"/>
-        <Class IRI="/Message"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasStartDate"/>
-        <Class IRI="/CulturalMovement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasSubject"/>
-        <Class IRI="/Composition"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasTopic"/>
-        <Class IRI="/Interpretation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/hasWikiDescription"/>
-        <Class abbreviatedIRI="arco:CulturalProperty"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="dc:description"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="dc:location"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="dc:source"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="dc:title"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasBackgroundElements"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasColour"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasDescriptionScene"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasEndDate"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasEnvironment"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasForegroundElements"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasLights"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasMessage"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasPerspectiveStudy"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasSource"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasStartDate"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasSubject"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasTopic"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/hasWikiDescription"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Abstract</IRI>
-        <Literal xml:lang="en">This individual represents a low figurative gradualness of the painting.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Asymmetrical</IRI>
-        <Literal xml:lang="en">This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Composition</IRI>
-        <Literal xml:lang="en">This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ConnotativeDescription</IRI>
-        <Literal xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/CulturalMovement</IRI>
-        <Literal xml:lang="en">This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/DenotativeDescription</IRI>
-        <Literal xml:lang="en">This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/DenotativeTypeDefinition</IRI>
-        <Literal xml:lang="en">This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ElementRelationships</IRI>
-        <Literal xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ElementsComposition</IRI>
-        <Literal xml:lang="en">This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ElementsRelationshipsType</IRI>
-        <Literal xml:lang="en">This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ExpressiveDescription</IRI>
-        <Literal xml:lang="en">This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Figurative</IRI>
-        <Literal xml:lang="en">This individual represents a medium figurative gradualness of the painting.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Iconic</IRI>
-        <Literal xml:lang="en">This individual represents a high figurative gradualness of the painting.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Interpretation</IRI>
-        <Literal xml:lang="en">This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Message</IRI>
-        <Literal xml:lang="en">This class groups together the elements related to the message conveyed by the cultural property.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/RelationsComposition</IRI>
-        <Literal xml:lang="en">This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Scene</IRI>
-        <Literal xml:lang="en">This class indicates the episode represented by the cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/SemioticDescription</IRI>
-        <Literal xml:lang="en">This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Symmetrical</IRI>
-        <Literal xml:lang="en">This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasBackgroundElements</IRI>
-        <Literal xml:lang="en">This property describes the background elements that are part of the cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasColour</IRI>
-        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the main colours that compose it.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasComposition</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to the class that indicates its composition.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasConnotativeDescription</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to its connotative description.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasCulturalMovement</IRI>
-        <Literal xml:lang="en">This property links the cultural property to the related cultural movement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasDenotativeDescription</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to its denotative description.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasDenotativeTypeDefinition</IRI>
-        <Literal xml:lang="en">This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasDescriptionScene</IRI>
-        <Literal xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasElementRelationships</IRI>
-        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasElementRelationshipsType</IRI>
-        <Literal xml:lang="en">This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasElementsComposition</IRI>
-        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasEndDate</IRI>
-        <Literal xml:lang="en">This property tells us the end date of a movement.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasEnvironment</IRI>
-        <Literal xml:lang="en">This property makes explicit the environmental references linked to the description of the scene.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasExpressiveDescription</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to its expressive description.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasForegroundElements</IRI>
-        <Literal xml:lang="en">This property describes the foreground elements that are part of the cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasInterpretation</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to its connotative interpretation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasLights</IRI>
-        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the lights and shadows that compose it.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasMessage</IRI>
-        <Literal xml:lang="en">This property relates the cultural asset to the analysis of its message.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasMessageInterpretation</IRI>
-        <Literal xml:lang="en">This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasPerspectiveStudy</IRI>
-        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the perspective elements that compose it.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasRelationsComposition</IRI>
-        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasScene</IRI>
-        <Literal xml:lang="en">This property relates a cultural asset to the scene it represents.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasSemioticDescription</IRI>
-        <Literal xml:lang="en">This property connects a &apos;CulturalProperty&apos; with &apos;SemioticDescription&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasSource</IRI>
-        <Literal xml:lang="en">This property relates the source of data to the class &apos;Message&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasStartDate</IRI>
-        <Literal xml:lang="en">This property tells us the start date of a movement.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasSubject</IRI>
-        <Literal xml:lang="en">This property describes the subject of &apos;CulturalProperty&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasTopic</IRI>
-        <Literal xml:lang="en">This property relates the cultural asset to the analysis of its topics.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasWikiDescription</IRI>
-        <Literal xml:lang="en">This property represents the description of the cultural asset provided by Wikipedia.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isCompositionOf</IRI>
-        <Literal xml:lang="en">This property relates the class that indicates a cultural asset’s composition with the related work of art.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isConnotativeDescriptionOf</IRI>
-        <Literal xml:lang="en">This property relates the connotative description with the related cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isCulturalMovementOf</IRI>
-        <Literal xml:lang="en">This property links the cultural movement to the related cultural property.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isDenotativeDescriptionOf</IRI>
-        <Literal xml:lang="en">This property relates the denotative description with the related cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isDenotativeTypeDefinitionOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has denotative type definition&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isElementRelationshipsOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has elements relationships&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isElementRelationshipsTypeOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has element relationship type&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isElementsCompositionOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has element composition&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isExpressiveDescriptionOf</IRI>
-        <Literal xml:lang="en">This property relates the expressive description with the related cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isInterpretationOf</IRI>
-        <Literal xml:lang="en">This property relates the connotative interpretation with the related cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isMessageInterpretationOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has message interpretation&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isRelationsCompositionOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;has relation composition&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isSceneOf</IRI>
-        <Literal xml:lang="en">This property relates the scene with the related cultural asset.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isSemioticDescriptionOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &apos;hasSemioticDescription&apos;.</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:s-sd="https://domain/smartology/semiotic-description/">
+    <owl:Ontology rdf:about="https://domain/smartology/semiotic-description">
+        <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
+        <dc:creator>Antonio Picone</dc:creator>
+        <dc:creator>Luana Bulla</dc:creator>
+        <dc:creator>Luca Failla</dc:creator>
+        <dc:description xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</dc:description>
+        <rdfs:label xml:lang="en">Semiotic Description Ontology (Smartology network)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the class that indicates its composition.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasConnotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasConnotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasCulturalMovement -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasCulturalMovement">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isCulturalMovementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:comment xml:lang="en">This property links the cultural property to the related cultural movement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its denotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationships -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationships">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationshipsType -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationshipsType">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasExpressiveDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasExpressiveDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its expressive description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative interpretation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessageInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasMessageInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isMessageInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:comment xml:lang="en">This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasRelationsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasRelationsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isRelationsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasScene -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasScene">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSceneOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the scene it represents.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSemioticDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasSemioticDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSemioticDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property connects a &apos;CulturalProperty&apos; with &apos;SemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the class that indicates a cultural asset’s composition with the related work of art.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isConnotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isCulturalMovementOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isCulturalMovementOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This property links the cultural movement to the related cultural property.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the denotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has denotative type definition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has elements relationships&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element relationship type&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isExpressiveDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the expressive description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative interpretation with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isMessageInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isMessageInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has message interpretation&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isRelationsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isRelationsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has relation composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSceneOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSceneOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the scene with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSemioticDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSemioticDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;hasSemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/location -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/location">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasBackgroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasBackgroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the background elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasColour -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasColour">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the main colours that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDescriptionScene -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionScene">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasEndDate">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property tells us the end date of a movement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasEnvironment -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasEnvironment">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property makes explicit the environmental references linked to the description of the scene.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasForegroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasForegroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the foreground elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasLights -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasLights">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the lights and shadows that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessage -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasMessage">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its message.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasPerspectiveStudy -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasPerspectiveStudy">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the perspective elements that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSource -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSource">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the source of data to the class &apos;Message&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasStartDate">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property tells us the start date of a movement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSubject -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSubject">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the subject of &apos;CulturalProperty&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasTopic">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its topics.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasWikiDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasWikiDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the cultural asset provided by Wikipedia.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Composition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Composition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ConnotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ConnotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/CulturalMovement -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/CulturalMovement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeTypeDefinition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeTypeDefinition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementRelationships -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementRelationships">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsRelationshipsType -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsRelationshipsType">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ExpressiveDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ExpressiveDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Interpretation -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Interpretation">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Message -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Message">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements related to the message conveyed by the cultural property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/RelationsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/RelationsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Scene -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Scene">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class indicates the episode represented by the cultural asset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/SemioticDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/SemioticDescription">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description">
+        <dc:description xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</dc:description>
+        <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Abstract -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Abstract">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a low figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Asymmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Asymmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Figurative -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Figurative">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a medium figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Iconic -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Iconic">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a high figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Symmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Symmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability.</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
