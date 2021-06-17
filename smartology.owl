@@ -40,6 +40,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -69,17 +75,6 @@
         <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
         <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
         <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative description.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://domain/smartology/semiotic-description/hasCulturalMovement -->
-
-    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasCulturalMovement">
-        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isCulturalMovementOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:comment xml:lang="en">This property links the cultural property to the related cultural movement</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -225,16 +220,6 @@
     
 
 
-    <!-- https://domain/smartology/semiotic-description/isCulturalMovementOf -->
-
-    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isCulturalMovementOf">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:comment xml:lang="en">This property links the cultural movement to the related cultural property.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://domain/smartology/semiotic-description/isDenotativeDescriptionOf -->
 
     <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf">
@@ -356,42 +341,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/location -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/location">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/source -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/source">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://domain/smartology/semiotic-description/hasBackgroundElements -->
 
     <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasBackgroundElements">
@@ -412,22 +361,22 @@
     
 
 
+    <!-- https://domain/smartology/semiotic-description/hasCulturalMovement -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasCulturalMovement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property links the cultural property to the related cultural movement</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://domain/smartology/semiotic-description/hasDescriptionScene -->
 
     <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionScene">
         <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://domain/smartology/semiotic-description/hasEndDate -->
-
-    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasEndDate">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">This property tells us the end date of a movement.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -492,16 +441,6 @@
     
 
 
-    <!-- https://domain/smartology/semiotic-description/hasStartDate -->
-
-    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasStartDate">
-        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/CulturalMovement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">This property tells us the start date of a movement.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://domain/smartology/semiotic-description/hasSubject -->
 
     <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSubject">
@@ -557,15 +496,6 @@
     <owl:Class rdf:about="https://domain/smartology/semiotic-description/ConnotativeDescription">
         <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
         <rdfs:comment xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://domain/smartology/semiotic-description/CulturalMovement -->
-
-    <owl:Class rdf:about="https://domain/smartology/semiotic-description/CulturalMovement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:comment xml:lang="en">This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).</rdfs:comment>
     </owl:Class>
     
 
@@ -683,14 +613,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://domain/smartology/semiotic-description -->
-
-    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description">
-        <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
-    </owl:NamedIndividual>
     
 
 
