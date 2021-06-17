@@ -57,7 +57,7 @@ def semioticDescription():
 	g.add((arcoSD.ExpressiveDescription, RDFS.comment, Literal("This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).", lang="en")))
 
 	#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
-	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.DataProperty))
+	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.DataTypeProperty))
 	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
 	#g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
 	#g.add((arcoSD.hasCulturalMovement, OWL.inverseOf, arcoSD.isCulturalMovementOf))
@@ -340,11 +340,11 @@ def denotativeDescription():
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
-'''
+
 #CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
 def culturalMovement():
 	#Cultural Movement
-	
+	'''
 	g.add((arcoSD.CulturalMovement, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.CulturalMovement, RDFS.comment, Literal("This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).", lang="en")))
 
@@ -373,11 +373,11 @@ def culturalMovement():
 	g.add((arcoSD.hasEndDate, RDFS.domain, arcoSD.CulturalMovement))
 	g.add((arcoSD.hasEndDate, RDFS.range, RDFS.Literal))
 	g.add((arcoSD.hasEndDate, RDFS.comment, Literal("This property tells us the end date of a movement.", lang="en")))
-
+'''
 		
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
-'''	
+	
 	
 def saveToFile(ontology, fileName):
 	with open("{}.ttl".format(fileName), "w") as ontFile:
