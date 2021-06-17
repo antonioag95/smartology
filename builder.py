@@ -56,19 +56,21 @@ def semioticDescription():
 	g.add((arcoSD.ExpressiveDescription, RDFS.subClassOf, arcoSD.SemioticDescription))
 	g.add((arcoSD.ExpressiveDescription, RDFS.comment, Literal("This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).", lang="en")))
 
-	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.ObjectProperty))
+	#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
+	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.DataProperty))
 	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
-	g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
-	g.add((arcoSD.hasCulturalMovement, OWL.inverseOf, arcoSD.isCulturalMovementOf))
+	#g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
+	#g.add((arcoSD.hasCulturalMovement, OWL.inverseOf, arcoSD.isCulturalMovementOf))
 	g.add((arcoSD.hasCulturalMovement, RDFS.comment, Literal("This property links the cultural property to the related cultural movement", lang="en")))
+	
+	#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
+	#g.add((arcoSD.isCulturalMovementOf, RDFS.domain, arcoSD.CulturalMovement))
+	#g.add((arcoSD.isCulturalMovementOf, RDFS.range, arco.CulturalProperty))
+	#g.add((arcoSD.isCulturalMovementOf, OWL.inverseOf, arcoSD.hasCulturalMovement))
+	#g.add((arcoSD.isCulturalMovementOf, RDFS.comment, Literal("This property links the cultural movement to the related cultural property.", lang="en")))
 
-	g.add((arcoSD.isCulturalMovementOf, RDFS.domain, arcoSD.CulturalMovement))
-	g.add((arcoSD.isCulturalMovementOf, RDFS.range, arco.CulturalProperty))
-	g.add((arcoSD.isCulturalMovementOf, OWL.inverseOf, arcoSD.hasCulturalMovement))
-	g.add((arcoSD.isCulturalMovementOf, RDFS.comment, Literal("This property links the cultural movement to the related cultural property.", lang="en")))
-
-	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
-	g.add((arcoSD.CulturalMovement, RDFS.comment, Literal("This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).", lang="en")))
+	#g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
+	#g.add((arcoSD.CulturalMovement, RDFS.comment, Literal("This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).", lang="en")))
 
 	g.add((arcoSD.hasConnotativeDescription, RDF.type, OWL.ObjectProperty))
 	g.add((arcoSD.hasConnotativeDescription, RDFS.domain, arcoSD.SemioticDescription))
@@ -338,9 +340,12 @@ def denotativeDescription():
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
 
+'''
+#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
 def culturalMovement():
 	#Cultural Movement
-	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
+	
+	g.add((arcoSD.CulturalMovement, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.CulturalMovement, RDFS.comment, Literal("This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).", lang="en")))
 
 	g.add((DC.title, RDF.type, OWL.DatatypeProperty))
@@ -372,7 +377,7 @@ def culturalMovement():
 		
 	ont = g.serialize(format='turtle').decode("utf-8")
 	return ont
-	
+'''	
 	
 def saveToFile(ontology, fileName):
 	with open("{}.ttl".format(fileName), "w") as ontFile:
