@@ -57,10 +57,11 @@ def semioticDescription():
 	g.add((arcoSD.ExpressiveDescription, RDFS.comment, Literal("This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).", lang="en")))
 
 	#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
-	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.DataTypeProperty))
+	g.add((arcoSD.hasCulturalMovement, RDF.type, OWL.DatatypeProperty))
 	g.add((arcoSD.hasCulturalMovement, RDFS.domain, arco.CulturalProperty))
 	#g.add((arcoSD.hasCulturalMovement, RDFS.range, arcoSD.CulturalMovement))
 	#g.add((arcoSD.hasCulturalMovement, OWL.inverseOf, arcoSD.isCulturalMovementOf))
+	g.add((arcoSD.hasCulturalMovement, RDFS.range, RDFS.Literal))
 	g.add((arcoSD.hasCulturalMovement, RDFS.comment, Literal("This property links the cultural property to the related cultural movement", lang="en")))
 	
 	#CULTURAL MOVEMENT AS CLASS WILL BE IMPLEMENTED LATER
