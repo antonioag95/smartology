@@ -68,7 +68,6 @@ def semioticDescription():
 	g.add((arcoSD.isCulturalMovementOf, RDFS.comment, Literal("This property links the cultural movement to the related cultural property.", lang="en")))
 
 	g.add((arcoSD.CulturalMovement, RDF.type, OWL.Class))
-	g.add((arcoSD.CulturalMovement, RDFS.subClassOf, arco.CulturalProperty))
 	g.add((arcoSD.CulturalMovement, RDFS.comment, Literal("This class represents the cultural movement to which the cultural asset is linked (i.e. Renaissance, Gotic).", lang="en")))
 
 	g.add((arcoSD.hasConnotativeDescription, RDF.type, OWL.ObjectProperty))
