@@ -397,30 +397,40 @@ def addToOntology(resource):
 		if (key == "resource"):
 			res = URIRef(value)
 			g.add((res, RDF.type, arco.CulturalProperty))
-		if (key == "subject"):
-			subject = value
-			g.add((res, arcoSD.hasSubject, Literal(subject)))
+		if (key == "hasSubject"):
+			hasSubject = value
+			g.add((res, arcoSD.hasSubject, Literal(hasSubject)))
+		if (key == "hasWikiDescription"):
+			hasWikiDescription = value
+			g.add((res, arcoSD.hasWikiDescription, Literal(hasWikiDescription)))
+		if (key == "hasCulturalMovement"):
+			hasCulturalMovement = value
+			# As 'hasCulturalMovement' is only a property - up to this moment - it only takes a Literal
+			g.add((res, arcoSD.hasCulturalMovement, Literal(hasCulturalMovement)))
+		if (key == "hasPerspectiveStudy"):
+			hasPerspectiveStudy = value
+			g.add((res, arcoSD.hasPerspectiveStudy, Literal(hasPerspectiveStudy)))
+		if (key == "hasBackgroundElement"):
+			hasBackgroundElement = value
+			g.add((res, arcoSD.hasBackgroundElement, Literal(hasBackgroundElement)))
+		if (key == "hasForegroundElement"):
+			hasForegroundElement = value
+			g.add((res, arcoSD.hasForegroundElement, Literal(hasForegroundElement)))
+		if (key == "hasLights"):
+			hasLights = value
+			g.add((res, arcoSD.hasLights,Literal(hasLights)))
+		if (key == "hasColour"):
+			hasColour = value
+			g.add((res, arcoSD.hasColour,Literal(hasColour)))
+		if (key == "hasTopic"):
+			hasTopic = value
+			g.add((res, arcoSD.hasTopic,Literal(hasTopic)))
 		if (key == "scene"):
 			scene = value
 			g.add((res, arcoSD.hasDescriptionScene, Literal(scene)))
 		if (key == "environment"):
 			environment = value
 			g.add((res, arcoSD.hasEnvironment, Literal(environment)))
-		if (key == "foreground"):
-			foreground = value
-			g.add((res, arcoSD.hasForegroundElements, Literal(foreground)))
-		if (key == "background"):
-			background = value
-			g.add((res, arcoSD.hasBackgroundElements, Literal(background)))
-		if (key == "hasPerspectiveStudy"):
-			perspectiveStudy = value
-			g.add((res, arcoSD.hasPerspectiveStudy, Literal(perspectiveStudy)))
-		'''
-		if (key == "hasDescriptionRelations"):
-			# TO DO
-			descriptionRelations = value
-			g.add((res, arcoSD.hasPerspectiveStudy, Literal(perspectiveStudy)))
-		'''
 		if (key == "denotativeTypeDefinition"):
 			denotativeTypeDefinition = value
 			g.add((res, arcoSD.hasDenotativeTypeDefinition,arcoSD[denotativeTypeDefinition]))
@@ -433,12 +443,6 @@ def addToOntology(resource):
 		if (key == "hasMessage"):
 			hasMessage = value
 			g.add((res, arcoSD.hasMessage,Literal(hasMessage)))
-		if (key == "hasTopic"):
-			hasTopic = value
-			g.add((res, arcoSD.hasTopic,Literal(hasTopic)))
-		if (key == "hasLight"):
-			hasLight = value
-			g.add((res, arcoSD.hasLights,Literal(hasLight)))
 
 def buildAuthorInfo():
 	ontologyIRI = URIRef("https://domain/smartology/semiotic-description")
