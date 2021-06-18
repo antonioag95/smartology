@@ -1,15 +1,25 @@
 # Smartology 
 ### Semiotic Description Ontology (Smartology network)
-In un mondo in cui l'intelligenza artificiale vige in ogni campo, riteniamo che occorra rivoluzionare anche il campo delle ontologie, in particolare, ci occupiamo di estendere l'ontologia pre-esistente di ArCo (Architettura della Conoscenza), un'ontologia tutta italiana che descrive il patrimonio culturale del nostro Paese con dati estratti dal Catalogo Generale dei Beni Culturali. 
-In particolare, ArCo, suppur rappresenti un'ontologia ben strutturata, è carente di alcune voci che renderebbero la fruibilità della stessa ontologia utile per i visitatori, ricercatori ed appassionati che la consultano. In seguito ad un sondaggio, infatti, sono state individuate alcune domande su cui la gente si interroga maggiormente quando si trova ad ammirare un'opera culturale. Tra queste domande figurano:
-
-* Cosa rappresenta un'opera?
-* Qual è il messaggio che essa vuole trasmettere?
-
-Abbiamo deciso, quindi, di implementare ArCo ed estenderla creando un'ontologia, dopo averne esplorato la composizione, in modo tale da ricalcarne i tratti salienti, colmando però, allo stesso tempo, gli interrogativi di cui sopra. Per portare a termine questo _task_ ci siamo avvalsi di innovativi strumenti di _Intelligenza Artificiale_, che potessero rispondere a _task_ di _Question answering_ (QA) e di _Text summarization_: con il primo, l'IA è in grado di rispondere a domande, espresse attraverso l'uso del linguaggio naturale; con il secondo, invece, è possibile eseguire dei riassunti di testi in maniera automatica, in modo tale che le informazioni saltino subito all'occhio. Per potere alimentare una rete neurale sono necessari dei dati di partenza da raffinare e sui quali lavorare. Ai fini dimostrativi verranno implementate, all'interno della nostra estensione dell'ontologia, due opere e ne verranno analizzati i risultati. Ci occuperemo, in una seconda fase, di capire quali siano le difficoltà incontrate e quali siano le implementazioni future. Tutti questi aspetti verranno affrontati man mano nel corso di questa trattazione. Ovviamente si tratta di un'operazione che può essere eseguita nella sua interezza in maniera manuale, ma i tempi per la realizzazione ed i costi, poiché sono necessari esperti di dominio, sarebbero ingenti. Su ArCo sono presenti infatti milioni di opere che, grazie a questo metodo, possono essere inserite in ontologia in maniera automatica.
+Il progetto Smartology si pone l’obiettivo di raggiungere un’ottimizzazione del processo di automatizzazione in campo ontologico tramite strumenti di intelligenza artificiale.
+L’unione tra questi due ambiti ha portato all’ideazione e alla creazione di un tool capace di estrarre, analizzare e trattare dati testuali non strutturati. Tale processo è finalizzato al recupero di informazioni pertinenti che possano implementare la descrizione di una risorsa all’interno di un’ontologia già strutturata.
+Smartology vede inoltre al suo interno una sezione parallela interamente dedicata alla modellazione di una nuova ontologia: Semiotic Description Ontology. Quest’ultima è stata strutturata ai fini di una futura implementazione dell’esistente rete semantica chiamata [_ArCo_](http://wit.istc.cnr.it/arco) (Architetture della Conoscenza). Attualmente, ArCo fornisce utili informazioni in merito alla classificazione e alla registrazione dei beni culturali italiani ma non contempla al suo interno la loro analisi interpretativa. A seguito di un’accurata fase di studio e analisi, Semiotic Description Ontology provvede a donare un modello strutturato in grado di accogliere e ordinare dati testuali appartenenti alla semantica di un’opera d’arte. 
+Data la mancanza di esperti di dominio in grado di fornire informazioni che potessero implementare lo scheletro da noi ideato, abbiamo deciso di testare il tool sopra presentato direttamente sull’ontologia creata.
 
 ### Interrogazione di ArCo
-TO DO
+Al fine di estrarre dati da ArCo e ottenere un collegamento con le risorse contenute in esso, è stato generato il codice chiamato [data_extraction] (https://github.com/antonioag95/smartology/blob/main/data_extraction.py). 
+Tramite l’utilizzo della libreria _SPARQLWrapper_ è stato possibile interrogare il grafo sopramenzionato ed ottenere informazioni dettagliate sui beni culturali al suo interno. Genericamente, il codice può essere adattato a query differenti. Tuttavia, ai fini del funzionamento del processo da noi ideato, è stato necessario estrarre le informazioni associate alle proprietà sotto menzionate: 
+
+- _rdfs:label_: etichetta attribuita all’opera
+- _a-cd:hasAuthor_: l’autore del bene culturale
+- _dc:description_: la descrizione del bene culturale fornita dai catalogatori
+- _a-cd:historicalInformation_: le informazioni storiche associate ad ogni risorsa
+- l'uri corrispondente alla risorsa
+
+Al fine di evitare la duplicazione dei risultati ottenuti, sarebbe preferibile applicare i costrutti _SAMPLE_ e _GROUP BY_ all’interrogazione sottoposta. Tuttavia, a causa di un rallentamento dell’endpoint durante il processamento di query complesse, è stato necessario semplificare la costruzione della query e operare un’eliminazione delle risorse duplicate direttamente da codice. 
+In ultima analisi, il codice è abilitato allo scorrimento della paginazione tramite l’implementazione automatica dei costrutti _LIMIT_ e _OFFSET_. Questo meccanismo permette di estrarre la totalità dei dati rispondenti alla query sottoposta.
+Al fine del processo di estrazione, i dati restituiti originariamente in formato JSON, sono processati e organizzati in un DataFrame che permette il loro utilizzo per le fasi successive del processo.
+L’interrogazione diretta dello Sparql Endpoint utilizzato è possibile al seguente link.
+
 
 ### Raccolta dei dati
 È innanzitutto necessario occuparci della raccolta dei dati, nel nostro caso dei dati testuali per poter affrontare operazioni di _NLP_ (_Natural Language Processing_). Ricordiamo che l'origine di ogni bene culturale è su ArCo, che rappresenta su quell'ontologia una classe chiamata _CulturalProperty_. Per ricavare dei dati ci serve innanzitutto associare l'opera di ArCo a delle fonti attendibili e libere presenti sul _web_. Abbiamo deciso di utilizzare _Wikipedia_, la nota enciclopedia libera, che mette a disposizione dei programmatori numerose _API_ per la consultazione e gestione dei dati. Una prima difficoltà da incontrare risiede proprio nell'associazione di queste risorse, ArCo infatti non contiene, ovviamente nessun collegamento alla relativa pagina di _Wikipedia_. Per fortuna, quest'ultima mette a disposizione un'interessante _API_ in grado di cercare, date delle _keyword_ ed anche in maniera piuttosto flessibile, all'interno del vastissimo catalogo di risorse messe a disposizione. Ad esempio, se all'interno di ArCo un'opera viene chiamata con il nome de "Cenacolo" avrà la sua corrispondenza su _Wikipedia_ con il nome esatto di "Ultima Cena (Leonardo)", l'API in questione, ricercando non solo nel titolo, ma anche all'interno del contenuto delle voci, riesce ad eseguire queste associazioni.
@@ -35,10 +45,28 @@ Dalla pagina di _Wikipedia_, attraverso la tecnica dello _scraping_ impiegando l
 Il codice di questo processo può essere trovato all'interno del file [smartology.py](https://github.com/antonioag95/smartology/blob/main/smartology.py).
 
 ### BERT aka lo Stato dell'arte dell'NLP
-TO DO
+Una volta ultimata la fase di estrazione, è stato possibile elaborare e analizzare i dati ottenuti tramite l’applicazione di modelli di machine learning. Nello specifico, sono stati eseguiti task di _Question answering (QA)_ e di _Text summarization_: con il primo, l'IA è in grado di rispondere a domande, espresse attraverso l'uso del linguaggio naturale; con il secondo, invece, è possibile formulare dei riassunti di testi in maniera automatica. 
+Inoltre, il modello di Text Summarization è stato implementato in una funzione che ne permette un uso alternativo e innovativo. 
+Dato un testo libero, la funzione denominata _hasLiteral_ è in grado di estrarre informazioni in base a una determinata parola chiave. Una volta estrapolato il periodo contenente il termine prescelto, le frasi vengono raggruppate ed elaborate attraverso un processo di sintesi durante il quale è applicata una correzione grammaticale al fine di rendere la risposta semanticamente e sintatticamente corretta.
+Tale processo è finalizzato al recupero di informazioni pertinenti che possano implementare la descrizione di una risorsa all’interno di un’ontologia già strutturata.
+Per visionare la classe che racchiude i modelli scelti e le funzioni che ne permettono il funzionamento, si veda il codice [Bert_Text Processing] (https://github.com/antonioag95/smartology/blob/main/Bert_Text%20Processing.py). Per visionare la funzione hasLiteral si rimanda al codice [final_execution] (https://github.com/antonioag95/smartology/blob/main/final_execution.py).
+Il tool è stato attualmente testato prendendo in input le informazioni estratte da ArCo e Wikipedia e implementando in output alcuni tra i letterali presenti nell’ontologia _Semiotic Description Ontology_. 
+Il caso studio riportato, il cui esito è possibile visionare nel seguente [file] (), comprende l’implementazione delle informazioni ascrivibili a due rinomati beni culturali: il _Tondo Doni_ e il _David_, entrambi attribuibili a _Michelangelo Buonarroti_. 
+
+
 
 ### Modellazione dell'ontologia
-TO DO
+Un’analisi preliminare in seno al dominio dei beni culturali è stata condotta al fine di orientare la nostra ricerca e strutturare una modellazione pertinente ed accurata. 
+In questa fase di lavoro, è stata essenziale la comprensione della metodologia tradizionalmente adoperata per interpretare il messaggio di un’opera d’arte. Inoltre, al fine di consolidare l’accuratezza dello schema di modellazione, sono state prese in considerazione anche le domande più frequentemente poste dalle persone nei confronti di un bene culturale (ad esempio, interrogazioni contestuali o interpretative).
+Lo schema di modellazione si articola in cinque parti:
+
+- _Denotative Description_: fornisce una prima lettura del bene culturale basata sull'analisi descrittiva degli elementi che lo compongono (es. scena, tipo denotativo, soggetto).
+- _Connotative Description_: fornisce una seconda lettura del bene culturale basata sull'analisi del messaggio e dei temi a cui è associato (es. messaggio, argomento).
+- _Expressive Description_: fornisce una lettura dell'opera in chiave espressiva. Il bene culturale viene analizzato dal punto di vista delle componenti tecniche atte a veicolarne il significato (i.e. colore, luci e ombre).
+- _Cultural Movement_: parte dell’ongoing work, questa sezione fornirà un approfondimento sul movimento culturale proprio dell’opera d’arte.
+
+Lo schema preliminare di modellazione è visibile al [link] (). 
+
 
 ### Generazione della tassonomia
 Una volta definita la modellazione della nostra ontologia, occorre che venga implementata. Anche in questo caso, abbiamo preferito costruire la tassonomia da codice, è stata utilizzata infatti la libreria _RDFLib_, grazie alla quale, attraverso l'_import_ dei _namespace_ predefiniti di RDF, RDFS ed OWL e la scrittura delle triple è stata costruita l'ontologia. Abbiamo definito, inoltre, il _namespace_ dell'ontologia da noi creata:
