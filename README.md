@@ -6,7 +6,7 @@ Smartology vede inoltre al suo interno una sezione parallela interamente dedicat
 Data la mancanza di esperti di dominio in grado di fornire informazioni che potessero implementare lo scheletro da noi ideato, abbiamo deciso di testare il tool sopra presentato direttamente sull’ontologia creata.
 
 ### Interrogazione di ArCo
-Al fine di estrarre dati da ArCo e ottenere un collegamento con le risorse contenute in esso, è stato generato il codice chiamato [data_extraction](https://github.com/antonioag95/smartology/blob/main/data_extraction.py). 
+Al fine di estrarre dati da ArCo e ottenere un collegamento con le risorse contenute in esso, è stato generato il codice chiamato [data_extraction.py](https://github.com/antonioag95/smartology/blob/main/data_extraction.py). 
 Tramite l’utilizzo della libreria _SPARQLWrapper_ è stato possibile interrogare il grafo sopramenzionato ed ottenere informazioni dettagliate sui beni culturali al suo interno. Genericamente, il codice può essere adattato a query differenti. Tuttavia, ai fini del funzionamento del processo da noi ideato, è stato necessario estrarre le informazioni associate alle proprietà sotto menzionate: 
 
 - _rdfs:label_: etichetta attribuita all’opera
