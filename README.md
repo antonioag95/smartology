@@ -49,9 +49,9 @@ Una volta ultimata la fase di estrazione, è stato possibile elaborare e analizz
 Inoltre, il modello di Text Summarization è stato implementato in una funzione che ne permette un uso alternativo e innovativo. 
 Dato un testo libero, la funzione denominata _hasLiteral_ è in grado di estrarre informazioni in base a una determinata parola chiave. Una volta estrapolato il periodo contenente il termine prescelto, le frasi vengono raggruppate ed elaborate attraverso un processo di sintesi durante il quale è applicata una correzione grammaticale al fine di rendere la risposta semanticamente e sintatticamente corretta.
 Tale processo è finalizzato al recupero di informazioni pertinenti che possano implementare la descrizione di una risorsa all’interno di un’ontologia già strutturata.
-Per visionare la classe che racchiude i modelli scelti e le funzioni che ne permettono il funzionamento, si veda il codice [Bert_Text Processing] (https://github.com/antonioag95/smartology/blob/main/Bert_Text%20Processing.py). Per visionare la funzione hasLiteral si rimanda al codice [final_execution] (https://github.com/antonioag95/smartology/blob/main/final_execution.py).
+Per visionare la classe che racchiude i modelli scelti e le funzioni che ne permettono il funzionamento, si veda il codice [Bert_Text Processing.py](https://github.com/antonioag95/smartology/blob/main/Bert_Text%20Processing.py). Per visionare la funzione hasLiteral si rimanda al codice [final_execution.py](https://github.com/antonioag95/smartology/blob/main/final_execution.py).
 Il tool è stato attualmente testato prendendo in input le informazioni estratte da ArCo e Wikipedia e implementando in output alcuni tra i letterali presenti nell’ontologia _Semiotic Description Ontology_. 
-Il caso studio riportato, il cui esito è possibile visionare nel seguente [file] (), comprende l’implementazione delle informazioni ascrivibili a due rinomati beni culturali: il _Tondo Doni_ e il _David_, entrambi attribuibili a _Michelangelo Buonarroti_. 
+Il caso studio riportato, il cui esito è possibile visionare nel seguente [Bert-smartology.ttl](https://github.com/antonioag95/smartology/blob/main/Bert-smartology.ttl), comprende l’implementazione delle informazioni ascrivibili a due rinomati beni culturali: il _Tondo Doni_ e il _David_, entrambi attribuibili a _Michelangelo Buonarroti_. 
 
 
 
@@ -65,7 +65,7 @@ Lo schema di modellazione si articola in cinque parti:
 - _Expressive Description_: fornisce una lettura dell'opera in chiave espressiva. Il bene culturale viene analizzato dal punto di vista delle componenti tecniche atte a veicolarne il significato (i.e. colore, luci e ombre).
 - _Cultural Movement_: parte dell’ongoing work, questa sezione fornirà un approfondimento sul movimento culturale proprio dell’opera d’arte.
 
-Lo schema preliminare di modellazione è visibile al [link] (). 
+Lo schema preliminare di modellazione è visibile al [schema_di_modellazione.pdf](https://github.com/antonioag95/smartology/blob/main/schema_di_modellazione.pdf). 
 
 
 ### Generazione della tassonomia
@@ -101,5 +101,9 @@ Al termine della sua costruzione, la stessa è stata importata su _Protégé_ e 
 Man mano verranno implementate altre _keywords_, si consiglia di visionare  il file [builder.py](https://github.com/antonioag95/smartology/blob/main/builder.py) per visionare tutte le proprietà che è possibile implementare nell'ontologia e per visionare maggiori esempi su come essa è stata costruita.
 
 ### Ongoing work
-TO DO
+* Costruzione di un sistema che riesca a trovare i sinonimi di alcune _keyword_, questo ci permetterà di estrarre la descrizione da _Wikipedia_ con maggiore certezza; al momento la descrizione dell'opera dall'enciclopedia viene estratta eseguendo lo _scraping_ della prima sezione dopo l'abstract, come anticipato sopra, poiché la maggior parte delle volte la descrizione si trova proprio in quella sezione. Tuttavia, un maggior controllo del contenuto estratto potrebbe portarci ad estrarre il contenuto che ci interessa, quindi non solo la descrizione, con maggiore precisione e controllo.
+* L'utilizzo di BERT e l'esecuzione del _task_ di QA ci ha visti costretti a cercare le domande giuste da porre a BERT affinché rispondesse in maniera efficace e concisa, trovare dei sinonimi, anche in questo caso, potrebbe portare a formulare domande che soddisfano il _threshold_ per considerare valide le risposte fornite.
+* Implementazione di una classe 'CulturalMovement' che contenga tutti i movimenti culturali in maniera organizzata per quanto riguarda le classi e sottoclassi, è possibile infatti che un determinato movimento culturale sia inglobato da un altro. È possibile visionare la modellazione teorica della classe su questo [schema_di_modellazione.pdf](https://github.com/antonioag95/smartology/blob/main/schema_di_modellazione.pdf).
+* Ristrutturazione del codice che gestisce l'estrazione di _feature_ attraverso l'impiego di IA. Al momento non è prevista la parallelizzazione e ciò rende l'esecuzione lenta, con l'impiego del modulo di _threading_ possiamo velocizzare il processo, in vista di un'elaborazione di un quantitativo maggiore di opere.
+*  Creare un modello di classificazione per estrarre i letterali che al momento mancano, allenando una rete neurale che funzioni direttamente sulla lingua italiana.
 
