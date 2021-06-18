@@ -18,7 +18,7 @@ Tramite l’utilizzo della libreria _SPARQLWrapper_ è stato possibile interroga
 Al fine di evitare la duplicazione dei risultati ottenuti, sarebbe preferibile applicare i costrutti _SAMPLE_ e _GROUP BY_ all’interrogazione sottoposta. Tuttavia, a causa di un rallentamento dell’endpoint durante il processamento di query complesse, è stato necessario semplificare la costruzione della query e operare un’eliminazione delle risorse duplicate direttamente da codice. 
 In ultima analisi, il codice è abilitato allo scorrimento della paginazione tramite l’implementazione automatica dei costrutti _LIMIT_ e _OFFSET_. Questo meccanismo permette di estrarre la totalità dei dati rispondenti alla query sottoposta.
 Al fine del processo di estrazione, i dati restituiti originariamente in formato JSON, sono processati e organizzati in un DataFrame che permette il loro utilizzo per le fasi successive del processo.
-L’interrogazione diretta dello Sparql Endpoint utilizzato è possibile al seguente link.
+L’interrogazione diretta dello SPARQL Endpoint utilizzato è possibile in questo [link](https://dati.beniculturali.it/sparql).
 
 
 ### Raccolta dei dati
