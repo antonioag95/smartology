@@ -65,7 +65,7 @@ Lo schema di modellazione si articola in cinque parti:
 - _Expressive Description_: fornisce una lettura dell'opera in chiave espressiva. Il bene culturale viene analizzato dal punto di vista delle componenti tecniche atte a veicolarne il significato (i.e. colore, luci e ombre).
 - _Cultural Movement_: parte dell’ongoing work, questa sezione fornirà un approfondimento sul movimento culturale proprio dell’opera d’arte.
 
-Lo schema preliminare di modellazione è visibile al [schema_di_modellazione.pdf](https://github.com/antonioag95/smartology/raw/main/schema_di_modellazione.pdf). 
+Lo schema preliminare di modellazione è visibile nel file [schema_di_modellazione.pdf](https://github.com/antonioag95/smartology/raw/main/schema_di_modellazione.pdf). 
 
 
 ### Generazione della tassonomia
