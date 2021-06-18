@@ -51,7 +51,7 @@ Dato un testo libero, la funzione denominata _hasLiteral_ è in grado di estrarr
 Tale processo è finalizzato al recupero di informazioni pertinenti che possano implementare la descrizione di una risorsa all’interno di un’ontologia già strutturata.
 Per visionare la classe che racchiude i modelli scelti e le funzioni che ne permettono il funzionamento, si veda il codice [Bert_Text Processing.py](https://github.com/antonioag95/smartology/blob/main/Bert_Text%20Processing.py). Per visionare la funzione hasLiteral si rimanda al codice [final_execution.py](https://github.com/antonioag95/smartology/blob/main/final_execution.py).
 Il tool è stato attualmente testato prendendo in input le informazioni estratte da ArCo e Wikipedia e implementando in output alcuni tra i letterali presenti nell’ontologia _Semiotic Description Ontology_. 
-Il caso studio riportato, il cui esito è possibile visionare nel seguente [Bert-smartology.ttl](https://github.com/antonioag95/smartology/blob/main/Bert-smartology.ttl), comprende l’implementazione delle informazioni ascrivibili a due rinomati beni culturali: il _Tondo Doni_ e il _David_, entrambi attribuibili a _Michelangelo Buonarroti_. 
+Il caso studio riportato, il cui esito è possibile visionare nel seguente file [Bert-smartology.ttl](https://github.com/antonioag95/smartology/blob/main/Bert-smartology.ttl), comprende l’implementazione delle informazioni ascrivibili a due rinomati beni culturali: il _Tondo Doni_ e il _David_, entrambi attribuibili a _Michelangelo Buonarroti_. 
 
 
 
