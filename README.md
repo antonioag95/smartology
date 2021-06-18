@@ -13,7 +13,7 @@ Tramite l’utilizzo della libreria _SPARQLWrapper_ è stato possibile interroga
 - _a-cd:hasAuthor_: l’autore del bene culturale
 - _dc:description_: la descrizione del bene culturale fornita dai catalogatori
 - _a-cd:historicalInformation_: le informazioni storiche associate ad ogni risorsa
-- l'uri corrispondente alla risorsa
+- l'URI corrispondente alla risorsa
 
 Al fine di evitare la duplicazione dei risultati ottenuti, sarebbe preferibile applicare i costrutti _SAMPLE_ e _GROUP BY_ all’interrogazione sottoposta. Tuttavia, a causa di un rallentamento dell’endpoint durante il processamento di query complesse, è stato necessario semplificare la costruzione della query e operare un’eliminazione delle risorse duplicate direttamente da codice. 
 In ultima analisi, il codice è abilitato allo scorrimento della paginazione tramite l’implementazione automatica dei costrutti _LIMIT_ e _OFFSET_. Questo meccanismo permette di estrarre la totalità dei dati rispondenti alla query sottoposta.
