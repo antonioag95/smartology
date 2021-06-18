@@ -1,0 +1,1113 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://domain/smartology/semiotic-description"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://domain/smartology/semiotic-description"
+     versionIRI="https://domain/smartology/semiotic-description/1.1">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="arco" IRI="https://w3id.org/arco/ontology/arco/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="s-sd" IRI="https://domain/smartology/semiotic-description/"/>
+    <Import>https://domain/smartology/semiotic-description/1.1</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Antonio Picone</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Luana Bulla</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Luca Failla</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en">The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en">Semiotic Description Ontology (Smartology network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Semiotic Description Ontology (Smartology network)</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/Composition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ConnotativeDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DenotativeDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DenotativeTypeDefinition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ElementRelationships"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ElementsComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ElementsRelationshipsType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ExpressiveDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Message"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RelationsComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Scene"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SemioticDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasComposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasConnotativeDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDenotativeDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasElementRelationships"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasElementsComposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasExpressiveDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasInterpretation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasMessageInterpretation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasRelationsComposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasScene"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSemioticDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isCompositionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isElementRelationshipsOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isElementsCompositionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isInterpretationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isMessageInterpretationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isRelationsCompositionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSceneOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDescriptionRelations"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasBackgroundElements"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasColour"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasCulturalMovement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasDescriptionScene"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasForegroundElements"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasLights"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasMessage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasPerspectiveStudy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasSubject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasWikiDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Abstract"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Asymmetrical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Figurative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Iconic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Symmetrical"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Composition"/>
+        <Class IRI="/DenotativeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ConnotativeDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DenotativeDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DenotativeTypeDefinition"/>
+        <Class IRI="/DenotativeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ElementRelationships"/>
+        <Class IRI="/RelationsComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ElementsComposition"/>
+        <Class IRI="/Composition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ElementsRelationshipsType"/>
+        <Class IRI="/ElementRelationships"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ExpressiveDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Interpretation"/>
+        <Class IRI="/ConnotativeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Message"/>
+        <Class IRI="/Interpretation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RelationsComposition"/>
+        <Class IRI="/Composition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Scene"/>
+        <Class IRI="/DenotativeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SemioticDescription"/>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DenotativeTypeDefinition"/>
+        <NamedIndividual IRI="/Abstract"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/ElementsRelationshipsType"/>
+        <NamedIndividual IRI="/Asymmetrical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DenotativeTypeDefinition"/>
+        <NamedIndividual IRI="/Figurative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DenotativeTypeDefinition"/>
+        <NamedIndividual IRI="/Iconic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/ElementsRelationshipsType"/>
+        <NamedIndividual IRI="/Symmetrical"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <NamedIndividual IRI="/Figurative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <NamedIndividual IRI="/Symmetrical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <NamedIndividual IRI="/Figurative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <NamedIndividual IRI="/Symmetrical"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescriptionRelations"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal xml:lang="en">Relation about David:
+  The &quot;David&quot; was carved by Michelangelo reusing a block of marble in which had already been partially sketched by Agostino di Duccio a &quot;Gigante&quot; commissioned in 1464 . The pose of Michelangelo&apos;s David is unlike that of earlier Renaissance depictions of David . David is a symbol of strength and youthful beauty in Renaissance art</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasEnvironment"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal xml:lang="en">David Objects: tree trunk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasLights"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal> This pose gives the figure a slight &apos;s-curving&apos; to its entire torso, giving it a s curve .  The pose causes the figure&apos;s hips and shoulders to rest at opposing angles, giving a slight s curve to the entire torso </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasMessage"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal>The David by Michelangelo A masterpiece after the restoration</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasSource"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal>Wikipedia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasSubject"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal>Davide</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasTopic"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal> It is based on a common theme of a standing heroic nude male nude by standing in front of the statue .  The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasWikiDescription"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988"/>
+        <Literal>== History == == Interpretation ==
+The pose of Michelangelo&apos;s David is unlike that of earlier Renaissance depictions of David. The bronze statues by Donatello and Verrocchio represented the hero standing victorious over the head of Goliath, and the painter Andrea del Castagno had shown the boy in mid-swing, even as Goliath&apos;s head rested between his feet, but no earlier Florentine artist had omitted the giant altogether. According to most scholars, David is depicted before his battle with Goliath. Instead of being shown victorious over a foe much larger than he, David looks tense and ready for battle after he has made the decision to fight Goliath, but, before the battle has actually taken place. His brow is drawn, his neck tense, and the veins bulge out of his lowered right hand. His left hand holds a sling that is draped over his shoulder and down to his right hand, which holds the handle of the sling. The nudity reflects the story of David as stated in the Bible, I Samuel 17:38-39: &quot;And Saul armed David with his armour, and he put an helmet of brass upon his head; also he armed him with a coat of mail. And David girded his sword upon his armour, and he assayed to go; for he had not proved it. And David said unto Saul, I cannot go with these; for I have not proved them. And David put them off him.&quot;The twist of his body effectively conveys to the viewer the feeling that he is about to move; an impression heightened with contrapposto. The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude. In the High Renaissance, contrapposto poses were thought of as a distinctive feature of antique sculpture, initially materialised in the Doryphoros of Polykleitos (c. 440 BC). This is typified in David, as the figure stands with one leg holding its full weight and the other leg forward. This classic pose causes the figure&apos;s hips and shoulders to rest at opposing angles, giving a slight s-curve to the entire torso. The contrapposto is emphasized by the turn of the head to the left, and by the contrasting positions of the arms.
+Michelangelo&apos;s David has become one of the most recognized works of Renaissance sculpture; a symbol of strength and youthful beauty.
+The colossal size of the statue alone impressed Michelangelo&apos;s contemporaries. Vasari described it as &quot;certainly a miracle that of Michelangelo, to restore to life one who was dead,&quot; and then listed all of the largest and most grand of the ancient statues that he had ever seen, concluding that Michelangelo&apos;s work surpassed &quot;all ancient and modern statues, whether Greek or Latin, that have ever existed.&quot;The proportions of the David are atypical of Michelangelo&apos;s work; the figure has an unusually large head and hands (particularly apparent in the right hand). The small size of the genitals, though, is in line with his other works and with Renaissance conventions in general, perhaps referencing the ancient Greek ideal of pre-pubescent male nudity. These enlargements may be due to the fact that the statue was originally intended to be placed on the cathedral roofline, where the important parts of the sculpture may have been accentuated in order to be visible from below. The statue is unusually slender (front to back) in comparison to its height, which may be a result of the work done on the block before Michelangelo began carving it.
+It is possible that the David was conceived as a political statue before Michelangelo began to work on it. Certainly, David the giant-killer had long been seen as a political figure in Florence, and images of the Biblical hero already carried political implications there. Donatello&apos;s bronze David, made for the Medici family, perhaps c. 1440, had been appropriated by the Signoria in 1494, when the Medici were exiled from Florence, and the statue was installed in the courtyard of the Palazzo della Signoria, where it stood for the Republican government of the city. By placing Michelangelo&apos;s statue in the same general location, the Florentine authorities ensured that David would be seen as a political parallel as well as an artistic response to that earlier work. These political overtones led to the statue being attacked twice in its early days. Protesters pelted it with stones the year it debuted, and, in 1527, an anti-Medici riot resulted in its left arm being broken into three pieces.
+Commentators have noted the presence of foreskin on David&apos;s penis, which is at odds with the Judaic practice of circumcision, but is consistent with the conventions of Renaissance art.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescriptionRelations"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal xml:lang="en">Relation about Mary:
+ Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family . Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne . There is some debate as to whether Mary is receiving the Child from Joseph or vice versa
+Relation about Holy Family:
+ The traditional theme of the Holy Family is interpreted by the author in an unconventional and hermetic way . Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of Holy Family compositions.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasBackgroundElements"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal> Background figures are five nudes, whose meaning and function are subject to much speculation and debate .  The Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasColour"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The juxtaposition of bright colors foreshadows the same use of color in Michelangelo&apos;s later Sistine Ceiling frescoes.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasDescriptionScene"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal xml:lang="en">The scene appears to be a rural one, with the Holy Family enjoying themselves on the grass.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasEnvironment"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal xml:lang="en">The scene appears to be a rural one</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasForegroundElements"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal> There is a horizontal band, possibly a wall, separating the foreground and background .  There is also a possible horizontal band separating the background from the foreground </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasLights"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal xml:lang="en">Michelangelo&apos;s technique includes shading from the most intense colors first to the lighter shades on top, using the darker colors as shadows.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasMessage"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal>Mannerism</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasPerspectiveStudy"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal> For the shocking articulation of the perspective space, the work is really to be considered as a starting point of Mannerism </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasSource"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal>Wikipedia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasSubject"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal>Maria, Sacra Famiglia, Bambino Gesù</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasTopic"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal> The traditional theme of the Holy Family is interpreted by the author in an unconventional and hermetic way </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/hasWikiDescription"/>
+        <NamedIndividual IRI="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181"/>
+        <Literal>== Description ==
+Mary is the most prominent figure in the composition, taking up much of the center of the image.  She sits directly on the ground without a cushion between herself and the grass, to better communicate the theme of her relationship to the earth (?).  Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family.  Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne.  There is some debate as to whether Mary is receiving the Child from Joseph or vice versa.  Saint John the Baptist, the patron saint of Florence, is very commonly included in Florentine works depicting the Madonna and Child. He is in the middle-ground of the painting, between the Holy Family and the background.  The scene appears to be a rural one, with the Holy Family enjoying themselves on the grass and separated from the curiously (seemingly) unrelated group at the back by a low wall.
+The painting is still in its original frame, one that Michelangelo might have influenced or helped design.  The frame is ornately carved and rather unusual for the five heads it contains which protrude three-dimensionally into space.  Similar to the nudes of the background, the meanings of these heads has been the subject of speculation.  The frame also contains carvings of crescent moons, stars, vegetation, and lions’ heads.  These symbols are, perhaps, references to the Doni and Strozzi families, taken from each one&apos;s coat of arms.  As depicted on the frame, “the moons are bound together with ribbons that interlock with the lions,” possibly referring to the marriage of the two families.There is a horizontal band, possibly a wall, separating the foreground and background. The background figures are five nudes, whose meaning and function are subject to much speculation and debate.  Because they are much closer to us, the viewers, the Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image. Behind Saint John the Baptist is a semi-circular ridge, against which the &apos;ignudi&apos; are leaning, or upon which they are sitting. This semi-circle reflects or mirrors the circular shape of the painting itself and acts as a foil to the vertical nature of the principal group (the Holy family). Mary and Joseph gaze at Christ, but none of the background nudes looks directly at him.  The far background contains a mountainous landscape rendered in atmospheric perspective.</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasComposition"/>
+        <ObjectProperty IRI="/isCompositionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasConnotativeDescription"/>
+        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasDenotativeDescription"/>
+        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasElementRelationships"/>
+        <ObjectProperty IRI="/isElementRelationshipsOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasElementsComposition"/>
+        <ObjectProperty IRI="/isElementsCompositionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasExpressiveDescription"/>
+        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasInterpretation"/>
+        <ObjectProperty IRI="/isInterpretationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasMessageInterpretation"/>
+        <ObjectProperty IRI="/isMessageInterpretationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasRelationsComposition"/>
+        <ObjectProperty IRI="/isRelationsCompositionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasScene"/>
+        <ObjectProperty IRI="/isSceneOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasSemioticDescription"/>
+        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasComposition"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasConnotativeDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDenotativeDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasElementRelationships"/>
+        <Class IRI="/RelationsComposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+        <Class IRI="/ElementRelationships"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasElementsComposition"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasExpressiveDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasInterpretation"/>
+        <Class IRI="/ConnotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasMessageInterpretation"/>
+        <Class IRI="/Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasRelationsComposition"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasScene"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSemioticDescription"/>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isCompositionOf"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
+        <Class IRI="/ConnotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
+        <Class IRI="/DenotativeTypeDefinition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isElementRelationshipsOf"/>
+        <Class IRI="/ElementRelationships"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
+        <Class IRI="/ElementsRelationshipsType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isElementsCompositionOf"/>
+        <Class IRI="/ElementsComposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
+        <Class IRI="/ExpressiveDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isInterpretationOf"/>
+        <Class IRI="/Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isMessageInterpretationOf"/>
+        <Class IRI="/Message"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isRelationsCompositionOf"/>
+        <Class IRI="/RelationsComposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSceneOf"/>
+        <Class IRI="/Scene"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasComposition"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasConnotativeDescription"/>
+        <Class IRI="/ConnotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDenotativeDescription"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDenotativeTypeDefinition"/>
+        <Class IRI="/DenotativeTypeDefinition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasElementRelationships"/>
+        <Class IRI="/ElementRelationships"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasElementRelationshipsType"/>
+        <Class IRI="/ElementsRelationshipsType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasElementsComposition"/>
+        <Class IRI="/ElementsComposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasExpressiveDescription"/>
+        <Class IRI="/ExpressiveDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasInterpretation"/>
+        <Class IRI="/Interpretation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasMessageInterpretation"/>
+        <Class IRI="/Message"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasRelationsComposition"/>
+        <Class IRI="/RelationsComposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasScene"/>
+        <Class IRI="/Scene"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSemioticDescription"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isCompositionOf"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isConnotativeDescriptionOf"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDenotativeDescriptionOf"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDenotativeTypeDefinitionOf"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isElementRelationshipsOf"/>
+        <Class IRI="/RelationsComposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isElementRelationshipsTypeOf"/>
+        <Class IRI="/ElementRelationships"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isElementsCompositionOf"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isExpressiveDescriptionOf"/>
+        <Class IRI="/SemioticDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isInterpretationOf"/>
+        <Class IRI="/ConnotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isMessageInterpretationOf"/>
+        <Class IRI="/Interpretation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isRelationsCompositionOf"/>
+        <Class IRI="/Composition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSceneOf"/>
+        <Class IRI="/DenotativeDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSemioticDescriptionOf"/>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDescriptionRelations"/>
+        <Class IRI="/ElementRelationships"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasBackgroundElements"/>
+        <Class IRI="/ElementsComposition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasColour"/>
+        <Class IRI="/ExpressiveDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasCulturalMovement"/>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasDescriptionScene"/>
+        <Class IRI="/Scene"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasEnvironment"/>
+        <Class IRI="/Scene"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasForegroundElements"/>
+        <Class IRI="/ElementsComposition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasLights"/>
+        <Class IRI="/ExpressiveDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasMessage"/>
+        <Class IRI="/Message"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasPerspectiveStudy"/>
+        <Class IRI="/RelationsComposition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasSource"/>
+        <Class IRI="/Message"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasSubject"/>
+        <Class IRI="/Composition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasTopic"/>
+        <Class IRI="/Interpretation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasWikiDescription"/>
+        <Class abbreviatedIRI="arco:CulturalProperty"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDescriptionRelations"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasBackgroundElements"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasColour"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasCulturalMovement"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasDescriptionScene"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasEnvironment"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasForegroundElements"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasLights"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasMessage"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasPerspectiveStudy"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasSource"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasSubject"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasTopic"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasWikiDescription"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Abstract</IRI>
+        <Literal xml:lang="en">This individual represents a low figurative gradualness of the painting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Asymmetrical</IRI>
+        <Literal xml:lang="en">This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Composition</IRI>
+        <Literal xml:lang="en">This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ConnotativeDescription</IRI>
+        <Literal xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DenotativeDescription</IRI>
+        <Literal xml:lang="en">This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DenotativeTypeDefinition</IRI>
+        <Literal xml:lang="en">This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ElementRelationships</IRI>
+        <Literal xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ElementsComposition</IRI>
+        <Literal xml:lang="en">This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ElementsRelationshipsType</IRI>
+        <Literal xml:lang="en">This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ExpressiveDescription</IRI>
+        <Literal xml:lang="en">This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Figurative</IRI>
+        <Literal xml:lang="en">This individual represents a medium figurative gradualness of the painting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Iconic</IRI>
+        <Literal xml:lang="en">This individual represents a high figurative gradualness of the painting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Interpretation</IRI>
+        <Literal xml:lang="en">This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Message</IRI>
+        <Literal xml:lang="en">This class groups together the elements related to the message conveyed by the cultural property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RelationsComposition</IRI>
+        <Literal xml:lang="en">This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Scene</IRI>
+        <Literal xml:lang="en">This class indicates the episode represented by the cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SemioticDescription</IRI>
+        <Literal xml:lang="en">This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Symmetrical</IRI>
+        <Literal xml:lang="en">This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasBackgroundElements</IRI>
+        <Literal xml:lang="en">This property describes the background elements that are part of the cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasColour</IRI>
+        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the main colours that compose it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasComposition</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to the class that indicates its composition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasConnotativeDescription</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to its connotative description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasCulturalMovement</IRI>
+        <Literal xml:lang="en">This property links the cultural property to the related cultural movement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDenotativeDescription</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to its denotative description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDenotativeTypeDefinition</IRI>
+        <Literal xml:lang="en">This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDescriptionScene</IRI>
+        <Literal xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasElementRelationships</IRI>
+        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasElementRelationshipsType</IRI>
+        <Literal xml:lang="en">This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasElementsComposition</IRI>
+        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasEnvironment</IRI>
+        <Literal xml:lang="en">This property makes explicit the environmental references linked to the description of the scene.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasExpressiveDescription</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to its expressive description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasForegroundElements</IRI>
+        <Literal xml:lang="en">This property describes the foreground elements that are part of the cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasInterpretation</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to its connotative interpretation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasLights</IRI>
+        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the lights and shadows that compose it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMessage</IRI>
+        <Literal xml:lang="en">This property relates the cultural asset to the analysis of its message.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMessageInterpretation</IRI>
+        <Literal xml:lang="en">This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasPerspectiveStudy</IRI>
+        <Literal xml:lang="en">This property relates the cultural asset to the analysis of the perspective elements that compose it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasRelationsComposition</IRI>
+        <Literal xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasScene</IRI>
+        <Literal xml:lang="en">This property relates a cultural asset to the scene it represents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSemioticDescription</IRI>
+        <Literal xml:lang="en">This property connects a &apos;CulturalProperty&apos; with &apos;SemioticDescription&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSource</IRI>
+        <Literal xml:lang="en">This property relates the source of data to the class &apos;Message&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSubject</IRI>
+        <Literal xml:lang="en">This property describes the subject of &apos;CulturalProperty&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasTopic</IRI>
+        <Literal xml:lang="en">This property relates the cultural asset to the analysis of its topics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasWikiDescription</IRI>
+        <Literal xml:lang="en">This property represents the description of the cultural asset provided by Wikipedia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isCompositionOf</IRI>
+        <Literal xml:lang="en">This property relates the class that indicates a cultural asset’s composition with the related work of art.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isConnotativeDescriptionOf</IRI>
+        <Literal xml:lang="en">This property relates the connotative description with the related cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDenotativeDescriptionOf</IRI>
+        <Literal xml:lang="en">This property relates the denotative description with the related cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDenotativeTypeDefinitionOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has denotative type definition&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isElementRelationshipsOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has elements relationships&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isElementRelationshipsTypeOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has element relationship type&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isElementsCompositionOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has element composition&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isExpressiveDescriptionOf</IRI>
+        <Literal xml:lang="en">This property relates the expressive description with the related cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isInterpretationOf</IRI>
+        <Literal xml:lang="en">This property relates the connotative interpretation with the related cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isMessageInterpretationOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has message interpretation&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isRelationsCompositionOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;has relation composition&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSceneOf</IRI>
+        <Literal xml:lang="en">This property relates the scene with the related cultural asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSemioticDescriptionOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &apos;hasSemioticDescription&apos;.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,327 @@
+@prefix arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s-sd: <https://domain/smartology/semiotic-description/> .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+<https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900281988.html> a arco:CulturalProperty ;
+    s-sd:hasLights " This pose gives the figure a slight 's-curving' to its entire torso, giving it a s curve .  The pose causes the figure's hips and shoulders to rest at opposing angles, giving a slight s curve to the entire torso " ;
+    s-sd:hasMessage "The David by Michelangelo A masterpiece after the restoration" ;
+    s-sd:hasSource "Wikipedia" ;
+    s-sd:hasSubject "Davide" ;
+    s-sd:hasTopic " It is based on a common theme of a standing heroic nude male nude by standing in front of the statue .  The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude " ;
+    s-sd:hasWikiDescription """== History == == Interpretation ==
+The pose of Michelangelo's David is unlike that of earlier Renaissance depictions of David. The bronze statues by Donatello and Verrocchio represented the hero standing victorious over the head of Goliath, and the painter Andrea del Castagno had shown the boy in mid-swing, even as Goliath's head rested between his feet, but no earlier Florentine artist had omitted the giant altogether. According to most scholars, David is depicted before his battle with Goliath. Instead of being shown victorious over a foe much larger than he, David looks tense and ready for battle after he has made the decision to fight Goliath, but, before the battle has actually taken place. His brow is drawn, his neck tense, and the veins bulge out of his lowered right hand. His left hand holds a sling that is draped over his shoulder and down to his right hand, which holds the handle of the sling. The nudity reflects the story of David as stated in the Bible, I Samuel 17:38-39: "And Saul armed David with his armour, and he put an helmet of brass upon his head; also he armed him with a coat of mail. And David girded his sword upon his armour, and he assayed to go; for he had not proved it. And David said unto Saul, I cannot go with these; for I have not proved them. And David put them off him."The twist of his body effectively conveys to the viewer the feeling that he is about to move; an impression heightened with contrapposto. The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude. In the High Renaissance, contrapposto poses were thought of as a distinctive feature of antique sculpture, initially materialised in the Doryphoros of Polykleitos (c. 440 BC). This is typified in David, as the figure stands with one leg holding its full weight and the other leg forward. This classic pose causes the figure's hips and shoulders to rest at opposing angles, giving a slight s-curve to the entire torso. The contrapposto is emphasized by the turn of the head to the left, and by the contrasting positions of the arms.
+Michelangelo's David has become one of the most recognized works of Renaissance sculpture; a symbol of strength and youthful beauty.
+The colossal size of the statue alone impressed Michelangelo's contemporaries. Vasari described it as "certainly a miracle that of Michelangelo, to restore to life one who was dead," and then listed all of the largest and most grand of the ancient statues that he had ever seen, concluding that Michelangelo's work surpassed "all ancient and modern statues, whether Greek or Latin, that have ever existed."The proportions of the David are atypical of Michelangelo's work; the figure has an unusually large head and hands (particularly apparent in the right hand). The small size of the genitals, though, is in line with his other works and with Renaissance conventions in general, perhaps referencing the ancient Greek ideal of pre-pubescent male nudity. These enlargements may be due to the fact that the statue was originally intended to be placed on the cathedral roofline, where the important parts of the sculpture may have been accentuated in order to be visible from below. The statue is unusually slender (front to back) in comparison to its height, which may be a result of the work done on the block before Michelangelo began carving it.
+It is possible that the David was conceived as a political statue before Michelangelo began to work on it. Certainly, David the giant-killer had long been seen as a political figure in Florence, and images of the Biblical hero already carried political implications there. Donatello's bronze David, made for the Medici family, perhaps c. 1440, had been appropriated by the Signoria in 1494, when the Medici were exiled from Florence, and the statue was installed in the courtyard of the Palazzo della Signoria, where it stood for the Republican government of the city. By placing Michelangelo's statue in the same general location, the Florentine authorities ensured that David would be seen as a political parallel as well as an artistic response to that earlier work. These political overtones led to the statue being attacked twice in its early days. Protesters pelted it with stones the year it debuted, and, in 1527, an anti-Medici riot resulted in its left arm being broken into three pieces.
+Commentators have noted the presence of foreskin on David's penis, which is at odds with the Judaic practice of circumcision, but is consistent with the conventions of Renaissance art.""" .
+
+<https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0900287181.html> a arco:CulturalProperty ;
+    s-sd:hasBackgroundElements " Background figures are five nudes, whose meaning and function are subject to much speculation and debate .  The Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image " ;
+    s-sd:hasForegroundElements " There is a horizontal band, possibly a wall, separating the foreground and background .  There is also a possible horizontal band separating the background from the foreground " ;
+    s-sd:hasMessage "Mannerism" ;
+    s-sd:hasPerspectiveStudy " For the shocking articulation of the perspective space, the work is really to be considered as a starting point of Mannerism " ;
+    s-sd:hasSource "Wikipedia" ;
+    s-sd:hasSubject "Maria, Sacra Famiglia, Bambino Gesù" ;
+    s-sd:hasTopic " The traditional theme of the Holy Family is interpreted by the author in an unconventional and hermetic way " ;
+    s-sd:hasWikiDescription """== Description ==
+Mary is the most prominent figure in the composition, taking up much of the center of the image.  She sits directly on the ground without a cushion between herself and the grass, to better communicate the theme of her relationship to the earth (?).  Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family.  Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne.  There is some debate as to whether Mary is receiving the Child from Joseph or vice versa.  Saint John the Baptist, the patron saint of Florence, is very commonly included in Florentine works depicting the Madonna and Child. He is in the middle-ground of the painting, between the Holy Family and the background.  The scene appears to be a rural one, with the Holy Family enjoying themselves on the grass and separated from the curiously (seemingly) unrelated group at the back by a low wall.
+The painting is still in its original frame, one that Michelangelo might have influenced or helped design.  The frame is ornately carved and rather unusual for the five heads it contains which protrude three-dimensionally into space.  Similar to the nudes of the background, the meanings of these heads has been the subject of speculation.  The frame also contains carvings of crescent moons, stars, vegetation, and lions’ heads.  These symbols are, perhaps, references to the Doni and Strozzi families, taken from each one's coat of arms.  As depicted on the frame, “the moons are bound together with ribbons that interlock with the lions,” possibly referring to the marriage of the two families.There is a horizontal band, possibly a wall, separating the foreground and background. The background figures are five nudes, whose meaning and function are subject to much speculation and debate.  Because they are much closer to us, the viewers, the Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image. Behind Saint John the Baptist is a semi-circular ridge, against which the 'ignudi' are leaning, or upon which they are sitting. This semi-circle reflects or mirrors the circular shape of the painting itself and acts as a foil to the vertical nature of the principal group (the Holy family). Mary and Joseph gaze at Christ, but none of the background nudes looks directly at him.  The far background contains a mountainous landscape rendered in atmospheric perspective.""" .
+
+<https://domain/smartology/semiotic-description> a owl:Ontology ;
+    rdfs:label "Semiotic Description Ontology (Smartology network)"@en ;
+    dc:creator "Antonio Picone",
+        "Luana Bulla",
+        "Luca Failla" ;
+    dc:description "The Semiotic Description module encodes the characteristics of a cultural asset, detected during an automatic process of extraction and processing of information by an artificial intelligence. Examples include denotative description, e.g. the scenes represented by the paintings, connotative descriptions, eg. the message conveyed by the work, expressive description, eg. the main colours that make up the work."@en ;
+    dc:title "Semiotic Description Ontology (Smartology network)"@en ;
+    owl:imports s-sd:1.1 ;
+    owl:versionIRI s-sd:1.1 .
+
+s-sd:Abstract a owl:NamedIndividual,
+        s-sd:DenotativeTypeDefinition ;
+    rdfs:comment "This individual represents a low figurative gradualness of the painting."@en .
+
+s-sd:Asymmetrical a owl:NamedIndividual,
+        s-sd:ElementsRelationshipsType ;
+    rdfs:comment "This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods."@en .
+
+s-sd:Figurative a owl:NamedIndividual,
+        s-sd:DenotativeTypeDefinition ;
+    rdfs:comment "This individual represents a medium figurative gradualness of the painting."@en .
+
+s-sd:Iconic a owl:NamedIndividual,
+        s-sd:DenotativeTypeDefinition ;
+    rdfs:comment "This individual represents a high figurative gradualness of the painting."@en .
+
+s-sd:Symmetrical a owl:NamedIndividual,
+        s-sd:ElementsRelationshipsType ;
+    rdfs:comment "This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability."@en .
+
+s-sd:hasBackgroundElements a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the background elements that are part of the cultural asset."@en ;
+    rdfs:domain s-sd:ElementsComposition ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasColour a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the cultural asset to the analysis of the main colours that compose it."@en ;
+    rdfs:domain s-sd:ExpressiveDescription ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasComposition a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to the class that indicates its composition."@en ;
+    rdfs:domain s-sd:DenotativeDescription ;
+    rdfs:range s-sd:Composition ;
+    owl:inverseOf s-sd:isCompositionOf .
+
+s-sd:hasConnotativeDescription a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to its connotative description."@en ;
+    rdfs:domain s-sd:SemioticDescription ;
+    rdfs:range s-sd:ConnotativeDescription ;
+    owl:inverseOf s-sd:isConnotativeDescriptionOf .
+
+s-sd:hasCulturalMovement a owl:DatatypeProperty ;
+    rdfs:comment "This property links the cultural property to the related cultural movement"@en ;
+    rdfs:domain arco:CulturalProperty ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasDenotativeDescription a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to its denotative description."@en ;
+    rdfs:domain s-sd:SemioticDescription ;
+    rdfs:range s-sd:DenotativeDescription ;
+    owl:inverseOf s-sd:isDenotativeDescriptionOf .
+
+s-sd:hasDenotativeTypeDefinition a owl:ObjectProperty ;
+    rdfs:comment "This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract)."@en ;
+    rdfs:domain s-sd:DenotativeDescription ;
+    rdfs:range s-sd:DenotativeTypeDefinition ;
+    owl:inverseOf s-sd:isDenotativeTypeDefinitionOf .
+
+s-sd:hasDescriptionScene a owl:DatatypeProperty ;
+    rdfs:comment "This property represents the description of the scene as it is shown by the cultural asset."@en ;
+    rdfs:domain s-sd:Scene ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasElementRelationships a owl:ObjectProperty ;
+    rdfs:comment "The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements."@en ;
+    rdfs:domain s-sd:RelationsComposition ;
+    rdfs:range s-sd:ElementRelationships ;
+    owl:inverseOf s-sd:isElementRelationshipsOf .
+
+s-sd:hasElementRelationshipsType a owl:ObjectProperty ;
+    rdfs:comment "This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical."@en ;
+    rdfs:domain s-sd:ElementRelationships ;
+    rdfs:range s-sd:ElementsRelationshipsType ;
+    owl:inverseOf s-sd:isElementRelationshipsTypeOf .
+
+s-sd:hasElementsComposition a owl:ObjectProperty ;
+    rdfs:comment "The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements."@en ;
+    rdfs:domain s-sd:Composition ;
+    rdfs:range s-sd:ElementsComposition ;
+    owl:inverseOf s-sd:isElementsCompositionOf .
+
+s-sd:hasEnvironment a owl:DatatypeProperty ;
+    rdfs:comment "This property makes explicit the environmental references linked to the description of the scene."@en ;
+    rdfs:domain s-sd:Scene ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasExpressiveDescription a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to its expressive description."@en ;
+    rdfs:domain s-sd:SemioticDescription ;
+    rdfs:range s-sd:ExpressiveDescription ;
+    owl:inverseOf s-sd:isExpressiveDescriptionOf .
+
+s-sd:hasForegroundElements a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the foreground elements that are part of the cultural asset."@en ;
+    rdfs:domain s-sd:ElementsComposition ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasInterpretation a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to its connotative interpretation."@en ;
+    rdfs:domain s-sd:ConnotativeDescription ;
+    rdfs:range s-sd:Interpretation ;
+    owl:inverseOf s-sd:isInterpretationOf .
+
+s-sd:hasLights a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the cultural asset to the analysis of the lights and shadows that compose it."@en ;
+    rdfs:domain s-sd:ExpressiveDescription ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasMessage a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the cultural asset to the analysis of its message."@en ;
+    rdfs:domain s-sd:Message ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasMessageInterpretation a owl:ObjectProperty ;
+    rdfs:comment "This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message."@en ;
+    rdfs:domain s-sd:Interpretation ;
+    rdfs:range s-sd:Message ;
+    owl:inverseOf s-sd:isMessageInterpretationOf .
+
+s-sd:hasPerspectiveStudy a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the cultural asset to the analysis of the perspective elements that compose it."@en ;
+    rdfs:domain s-sd:RelationsComposition ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasRelationsComposition a owl:ObjectProperty ;
+    rdfs:comment "The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work."@en ;
+    rdfs:domain s-sd:Composition ;
+    rdfs:range s-sd:RelationsComposition ;
+    owl:inverseOf s-sd:isRelationsCompositionOf .
+
+s-sd:hasScene a owl:ObjectProperty ;
+    rdfs:comment "This property relates a cultural asset to the scene it represents."@en ;
+    rdfs:domain s-sd:DenotativeDescription ;
+    rdfs:range s-sd:Scene ;
+    owl:inverseOf s-sd:isSceneOf .
+
+s-sd:hasSemioticDescription a owl:ObjectProperty ;
+    rdfs:comment "This property connects a 'CulturalProperty' with 'SemioticDescription'."@en ;
+    rdfs:domain arco:CulturalProperty ;
+    rdfs:range s-sd:SemioticDescription ;
+    owl:inverseOf s-sd:isSemioticDescriptionOf .
+
+s-sd:hasSource a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the source of data to the class 'Message'."@en ;
+    rdfs:domain s-sd:Message ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasSubject a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the subject of 'CulturalProperty'."@en ;
+    rdfs:domain s-sd:Composition ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasTopic a owl:DatatypeProperty ;
+    rdfs:comment "This property relates the cultural asset to the analysis of its topics."@en ;
+    rdfs:domain s-sd:Interpretation ;
+    rdfs:range rdfs:Literal .
+
+s-sd:hasWikiDescription a owl:DatatypeProperty ;
+    rdfs:comment "This property represents the description of the cultural asset provided by Wikipedia."@en ;
+    rdfs:domain arco:CulturalProperty ;
+    rdfs:range rdfs:Literal .
+
+s-sd:isCompositionOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the class that indicates a cultural asset’s composition with the related work of art."@en ;
+    rdfs:domain s-sd:Composition ;
+    rdfs:range s-sd:DenotativeDescription .
+
+s-sd:isConnotativeDescriptionOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the connotative description with the related cultural asset."@en ;
+    rdfs:domain s-sd:ConnotativeDescription ;
+    rdfs:range s-sd:SemioticDescription .
+
+s-sd:isDenotativeDescriptionOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the denotative description with the related cultural asset."@en ;
+    rdfs:domain s-sd:DenotativeDescription ;
+    rdfs:range s-sd:SemioticDescription .
+
+s-sd:isDenotativeTypeDefinitionOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has denotative type definition'."@en ;
+    rdfs:domain s-sd:DenotativeTypeDefinition ;
+    rdfs:range s-sd:DenotativeDescription .
+
+s-sd:isElementRelationshipsOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has elements relationships'."@en ;
+    rdfs:domain s-sd:ElementRelationships ;
+    rdfs:range s-sd:RelationsComposition .
+
+s-sd:isElementRelationshipsTypeOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has element relationship type'."@en ;
+    rdfs:domain s-sd:ElementsRelationshipsType ;
+    rdfs:range s-sd:ElementRelationships .
+
+s-sd:isElementsCompositionOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has element composition'."@en ;
+    rdfs:domain s-sd:ElementsComposition ;
+    rdfs:range s-sd:Composition .
+
+s-sd:isExpressiveDescriptionOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the expressive description with the related cultural asset."@en ;
+    rdfs:domain s-sd:ExpressiveDescription ;
+    rdfs:range s-sd:SemioticDescription .
+
+s-sd:isInterpretationOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the connotative interpretation with the related cultural asset."@en ;
+    rdfs:domain s-sd:Interpretation ;
+    rdfs:range s-sd:ConnotativeDescription .
+
+s-sd:isMessageInterpretationOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has message interpretation'."@en ;
+    rdfs:domain s-sd:Message ;
+    rdfs:range s-sd:Interpretation .
+
+s-sd:isRelationsCompositionOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'has relation composition'."@en ;
+    rdfs:domain s-sd:RelationsComposition ;
+    rdfs:range s-sd:Composition .
+
+s-sd:isSceneOf a owl:ObjectProperty ;
+    rdfs:comment "This property relates the scene with the related cultural asset."@en ;
+    rdfs:domain s-sd:Scene ;
+    rdfs:range s-sd:DenotativeDescription .
+
+s-sd:isSemioticDescriptionOf a owl:ObjectProperty ;
+    rdfs:comment "This is the inverse property of 'hasSemioticDescription'."@en ;
+    rdfs:domain s-sd:SemioticDescription ;
+    rdfs:range arco:CulturalProperty .
+
+s-sd:ElementsComposition a owl:Class ;
+    rdfs:comment "This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements)."@en ;
+    rdfs:subClassOf s-sd:Composition .
+
+s-sd:ElementsRelationshipsType a owl:Class ;
+    rdfs:comment "This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical."@en ;
+    rdfs:subClassOf s-sd:ElementRelationships .
+
+s-sd:ExpressiveDescription a owl:Class ;
+    rdfs:comment "This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows)."@en ;
+    rdfs:subClassOf s-sd:SemioticDescription .
+
+s-sd:Message a owl:Class ;
+    rdfs:comment "This class groups together the elements related to the message conveyed by the cultural property."@en ;
+    rdfs:subClassOf s-sd:Interpretation .
+
+s-sd:Scene a owl:Class ;
+    rdfs:comment "This class indicates the episode represented by the cultural asset."@en ;
+    rdfs:subClassOf s-sd:DenotativeDescription .
+
+s-sd:ConnotativeDescription a owl:Class ;
+    rdfs:comment "This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic)."@en ;
+    rdfs:subClassOf s-sd:SemioticDescription .
+
+s-sd:DenotativeTypeDefinition a owl:Class ;
+    rdfs:comment "This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract)."@en ;
+    rdfs:subClassOf s-sd:DenotativeDescription .
+
+s-sd:ElementRelationships a owl:Class ;
+    rdfs:comment "This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements)."@en ;
+    rdfs:subClassOf s-sd:RelationsComposition .
+
+s-sd:Interpretation a owl:Class ;
+    rdfs:comment "This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic)."@en ;
+    rdfs:subClassOf s-sd:ConnotativeDescription .
+
+s-sd:RelationsComposition a owl:Class ;
+    rdfs:comment "This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective)."@en ;
+    rdfs:subClassOf s-sd:Composition .
+
+arco:CulturalProperty a owl:Class .
+
+s-sd:Composition a owl:Class ;
+    rdfs:comment "This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element)."@en ;
+    rdfs:subClassOf s-sd:DenotativeDescription .
+
+s-sd:DenotativeDescription a owl:Class ;
+    rdfs:comment "This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject)."@en ;
+    rdfs:subClassOf s-sd:SemioticDescription .
+
+s-sd:SemioticDescription a owl:Class ;
+    rdfs:comment "This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print."@en ;
+    rdfs:subClassOf arco:CulturalProperty .
+
