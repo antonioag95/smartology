@@ -98,7 +98,7 @@ Al termine della sua costruzione, la stessa è stata importata su _Protégé_ e 
 		}
 ]
 ```
-Man mano verranno implementate altre _keywords_, si consiglia di consultare il file [builder.py](https://github.com/antonioag95/smartology/blob/main/builder.py) per visionare tutte le proprietà che è possibile implementare nell'ontologia e per visionare maggiori esempi su come essa è stata costruita.
+Man mano verranno implementate altre _keywords_, si consiglia di consultare il file [builder.py](https://github.com/antonioag95/smartology/blob/main/builder.py) per visionare tutte le proprietà che è possibile implementare nell'ontologia e per visualizzare ulteriori esempi su come essa è stata costruita.
 
 ### Ongoing work
 * Costruzione di un sistema che riesca a trovare i sinonimi di alcune _keyword_, questo ci permetterà di estrarre la descrizione da _Wikipedia_ con maggiore certezza; al momento la descrizione dell'opera dall'enciclopedia viene estratta eseguendo lo _scraping_ della prima sezione dopo l'abstract, come anticipato sopra, poiché la maggior parte delle volte la descrizione si trova proprio in quella sezione. Tuttavia, un maggior controllo del contenuto estratto potrebbe portarci ad estrarre il contenuto che ci interessa, quindi non solo la descrizione, con maggiore precisione e controllo.
