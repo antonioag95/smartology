@@ -106,9 +106,19 @@ def wikiSections(pageName, language):
 		content = response.json()["parse"]
 		pageID = content["pageid"]
 		for section in content["sections"]:
-			# We want to take only the first section, that means that number "1" or "1.x" need to be there
-			if (section["number"] == "1" or "1." in section["number"]):
-				needed.append({section["number"]:section["line"]})
+		#We want to take only the section relating to the meaning of the work. If in the titles of the paragraphs there is no reference referable to one of those proposed, 
+		#the one where the number "1" or "1.x" must be present will be used			
+			if 'Description' in section["line"]: 
+        			needed.append({section["number"]:section["line"]})
+      			elif 'Composition' in section["line"]:
+        			needed.append({section["number"]:section["line"]})
+      			elif 'Meaning' in section["line"]:
+        			needed.append({section["number"]:section["line"]})
+      			elif 'Interpretation' in section["line"]:
+        			needed.append({section["number"]:section["line"]})
+      			else:
+        			if section["number"] in  ["1","1."]:
+          				needed.append({section["number"]:section["line"]})
 	return pageID, needed
 
 def wikiSectionContent(pageName, pageID, sections, language):
