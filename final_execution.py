@@ -33,7 +33,6 @@ sparql = SPARQLWrapper("http://query.wikidata.org/sparql")
 _url_endpoint = "https://dati.beniculturali.it/sparql"
 
 
-
 #The query to be submitted to the extraction program can be formulated freely. 
 #However, for the process to run smoothly, information about the title and author of the work must be extracted. 
 #If more accuracy is desired, it is also possible to extract the description associated with the cultural property.
@@ -76,23 +75,26 @@ def hasLiteral (keyword):
  
     return '. '.join(sent for sent in hasProperty.split('.') if keyword in sent.lower())
 
-
+#graph to implement:
+g = rdflib.Graph()
+g.parse("smartology.owl", format="xml")
 
 if __name__ == "__main__":
+  
   results = Data_Extraction.pagination(query,5,5,10,'culturalProperty')
   results = pd.DataFrame(results,columns=['titleLabel', 'authorLabel', 'description', 'HistoricalInfo', 'culturalProperty'])
   results = results.drop_duplicates(subset="culturalProperty")
   
-  print(results)
+  ontology_implementation = []
 
-#for every cultural asset
+  #for every cultural asset
   for index, row in results.iterrows():
     print(f"Il titolo dell'opera è: {row['titleLabel']}")
     print(f"L'autore dell'opera è: {row['authorLabel']}\n")
     
     #Properties extracted by scraping: hasCulturalMovement, hasWikiDescription, hasSubject.
     keyword = row['titleLabel'] if len(row['titleLabel'].split()) < 5 else ' '.join(row['titleLabel'].split()[:2])
-    keyword = keyword + row['authorLabel']
+    keyword = keyword + row['authorLabel'].split()[0] ## da valutare.
     print(keyword)
     
     info = findInfo(keyword)
@@ -128,26 +130,27 @@ if __name__ == "__main__":
     context = prefLang["title"] + context + ' '.join(content)
 
     #DataProperties extracted through Question-Aswering
-    questions = {'hasEnvironment':'what is the scene?', 'hasMessage':'what is the painting about?'}       
+    questions = {'hasEnvironment':'what is the scene?', 'hasMessage':'what is the painting about?'} # da valutare.
     QAResults={k:Information_Retrieval.QA_Bert(modello_QAandSum,context,question) for k,question in questions.items()}
     
     #DataProperties extracted through Textual Analysis
     subject_en = [Information_Retrieval.translationEN_Bert(modello_ENTranslation,element) for element in depicts]
     hasDescriptionRelations = [[element, hasLiteral(element.lower())] for element in subject_en if element[0].isupper()]
-    hasDescriptionRelations = '\n'.join([f"Relation about {element[0]}: \n {element[1]}" for element in hasDescriptionRelations])
+    hasDescriptionRelations = '\n'.join([f"Relation about {element[0]}: \n {element[1]}" for element in hasDescriptionRelations if element[1] != None ]) 
 
-    DataProperties = {'hasSource':'Wikipedia',
-                       'hasSubject':", ".join(depicts),
-                       'resource':row['culturalProperty'],
+    DataProperties = {'resource':row['culturalProperty'],
+                       'hasSource':'Wikipedia',
+                       'hasSubject':", ".join([element for element in depicts if element[0].isupper()]),
                        'hasWikiDescription':' '.join(content),
-                       'hasMovement':' '.join(movement),
+                       'hasCulturalMovement':' '.join(movement),
                        'hasPerspectiveStudy':hasLiteral('perspective'),
                        'hasBackgroundElement':hasLiteral('background'),
                        'hasForegroundElement':hasLiteral('foreground'),
                        'hasLights':hasLiteral('light'),
                        'hasColour':hasLiteral('colour'),
                        'hasTopic':hasLiteral('theme'),
-                       'hasDescriptionRelations': hasDescriptionRelations
+                       'hasDescriptionRelations': hasDescriptionRelations,
+                       'hasDescriptionScene':hasLiteral('scene')
                        }
     DataProperties.update(QAResults)
     
@@ -156,7 +159,12 @@ if __name__ == "__main__":
     for k,v in DataProperties.items():
         print(f'{k}: \n{v}\n\n')
         
-        
-    #Unisci risultati all'ontologia:
-    #g.parse("smartology.owl", format="xml")
+    ontology_implementation += [DataProperties]
+     
+    #Check:
+    print(ontology_implementation)
+    #ontology implementation
+    main(False,ontology_implementation)
+
+
 
