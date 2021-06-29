@@ -425,10 +425,10 @@ def addToOntology(resource):
 		if (key == "hasTopic"):
 			hasTopic = value
 			g.add((res, arcoSD.hasTopic,Literal(hasTopic)))
-		if (key == "scene"):
+		if (key == "hasDescriptionScene"):
 			scene = value
 			g.add((res, arcoSD.hasDescriptionScene, Literal(scene)))
-		if (key == "environment"):
+		if (key == "hasEnvironment"):
 			environment = value
 			g.add((res, arcoSD.hasEnvironment, Literal(environment)))
 		if (key == "denotativeTypeDefinition"):
@@ -455,12 +455,21 @@ def buildAuthorInfo():
 	g.add((ontologyIRI, DC.title, Literal("Semiotic Description Ontology (Smartology network)", lang="en")))
 	g.add((ontologyIRI, RDFS.label, Literal("Semiotic Description Ontology (Smartology network)", lang="en")))
 
-def main():
-	if (BUILD_TAXONOMY):
+def main(build_taxonomy, dataToBeAdded):
+	
+	if build_taxonomy == True:
 		buildAuthorInfo()
 		buildTaxonomy()
 	else:
-		#
+		g.parse("{}.owl".format(TAXONOMY_FILE), format="xml") ##taxonomy da inserire nel main()
+		for resource in dataToBeAdded:
+			addToOntology(resource)
+		saveToFile(g.serialize(format='turtle').decode("utf-8"), "test")
+		
+		
+		'''
+		Exemple of results:
+		
 		dataToBeAdded = [
 							{
 								"resource": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900287181",
@@ -490,11 +499,9 @@ def main():
 								"hasTopic": "David And Goliath"
 							}
 
-						]
-		g.parse("{}.owl".format(TAXONOMY_FILE), format="xml")
-		for resource in dataToBeAdded:
-			addToOntology(resource)
-		saveToFile(g.serialize(format='turtle').decode("utf-8"), "test")
+					]
+		'''
+	
 
 
 if __name__ == "__main__":
