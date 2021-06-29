@@ -313,7 +313,7 @@ def denotativeDescription():
 	g.add((arcoSD.hasPerspectiveStudy, RDFS.comment, Literal("This property relates the cultural asset to the analysis of the perspective elements that compose it.", lang="en")))
 	
 	g.add((arcoSD.hasDescriptionRelations, RDF.type, OWL.DatatypeProperty))
-	g.add((arcoSD.hasDescriptionRelations, RDFS.domain, arcoSD.ElementsRelationships))
+	g.add((arcoSD.hasDescriptionRelations, RDFS.domain, arcoSD.ElementRelationships))
 	g.add((arcoSD.hasDescriptionRelations, RDFS.range, RDFS.Literal))
 	g.add((arcoSD.hasDescriptionRelations, RDFS.comment, Literal("Rivedere la documentazione LODE", lang="en")))
 
