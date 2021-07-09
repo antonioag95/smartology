@@ -1,0 +1,874 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://domain/smartology/semiotic-description#"
+     xml:base="https://domain/smartology/semiotic-description"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:arco="https://w3id.org/arco/ontology/arco/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:s-sd="https://domain/smartology/semiotic-description/">
+    <owl:Ontology rdf:about="https://domain/smartology/semiotic-description">
+        <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
+        <dc:creator>Antonio Picone</dc:creator>
+        <dc:creator>Luana Bulla</dc:creator>
+        <dc:creator>Luca Failla</dc:creator>
+        <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
+        <rdfs:label xml:lang="en">Semiotic Description Ontology (Smartology network)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the class that indicates its composition.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasConnotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasConnotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its denotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationships -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationships">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationshipsType -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationshipsType">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasExpressiveDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasExpressiveDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its expressive description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative interpretation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessageInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasMessageInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isMessageInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:comment xml:lang="en">This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasRelationsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasRelationsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isRelationsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasScene -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasScene">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSceneOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the scene it represents.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSemioticDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasSemioticDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSemioticDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property connects a &apos;CulturalProperty&apos; with &apos;SemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the class that indicates a cultural asset�s composition with the related work of art.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isConnotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the denotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has denotative type definition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has elements relationships&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element relationship type&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isExpressiveDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the expressive description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative interpretation with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isMessageInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isMessageInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has message interpretation&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isRelationsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isRelationsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has relation composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSceneOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSceneOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the scene with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSemioticDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSemioticDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;hasSemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasBackgroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasBackgroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the background elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasColour -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasColour">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the main colours that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasCulturalMovement -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasCulturalMovement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property links the cultural property to the related cultural movement</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDescriptionRelations -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionRelations">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDescriptionScene -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionScene">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasEnvironment -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasEnvironment">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property makes explicit the environmental references linked to the description of the scene.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasForegroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasForegroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the foreground elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasLights -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasLights">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the lights and shadows that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessage -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasMessage">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its message.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasPerspectiveStudy -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasPerspectiveStudy">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the perspective elements that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSource -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSource">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the source of data to the class &apos;Message&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSubject -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSubject">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the subject of &apos;CulturalProperty&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasTopic">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its topics.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasWikiDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasWikiDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the cultural asset provided by Wikipedia.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Composition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Composition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ConnotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ConnotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeTypeDefinition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeTypeDefinition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementRelationships -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementRelationships">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsRelationshipsType -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsRelationshipsType">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ExpressiveDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ExpressiveDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Interpretation -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Interpretation">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Message -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Message">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements related to the message conveyed by the cultural property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/RelationsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/RelationsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Scene -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Scene">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class indicates the episode represented by the cultural asset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/SemioticDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/SemioticDescription">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Abstract -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Abstract">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a low figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Asymmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Asymmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Figurative -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Figurative">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a medium figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Iconic -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Iconic">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a high figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Symmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Symmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402361 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402361">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasCulturalMovement>pittura veneta manierismo</s-sd:hasCulturalMovement>
+        <s-sd:hasEnvironment>the miraculous rescue of a Saracen</s-sd:hasEnvironment>
+        <s-sd:hasLights>The charm of the work consists above all in the dramatic evocation of the upset sea and in the skillful use of contrasts of light</s-sd:hasLights>
+        <s-sd:hasMessage>miraculous rescue of a Saracen</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasWikiDescription>== Descrizione e stile ==
+L&apos;opera è custodita alle gallerie dell&apos;Accademia di Venezia. Provenie dalla sala capitolare della Scuola Grande di San Marco, insieme agli altri tre dipinti del Tintoretto confiscati nel 1807: il precedente San Marco libera uno schiavo e quelli realizzati insieme a questo il Trafugamento del corpo di San Marco e il Ritrovamento del corpo di San Marco, quest&apos;ultimo assegnato diversamente a Brera.
+La composizione dell&apos;opera ricca di pathos racconta il miracoloso salvataggio di un saraceno in viaggio verso Alessandria. Colta la nave da una violenta tempesta questi aveva invocato il santo che l&apos;aveva esaudito.
+L&apos;impianto fascinoso dell&apos;opera consiste nella drammatica rappresentazione delle violente onde in cui si inabissa la nave, dei corpi contorti dei disperati naufraghi nelle contrastate luci che li illuminano e che ritagliano le nuvole del cielo tempestoso. Immerso in una luce soprannaturale san Marco cala dal cielo vestito di un abito rosato ad afferrare il Saraceno privo di sensi. L&apos;allora Guardian Grando della Scuola, il medico Tommaso Rangone, è rappresentato sul bordo della scialuppa mentre tenta di aiutare un naufrago inghiottito dalle acque.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900007363 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900007363">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasCulturalMovement>Primo Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasEnvironment>an allegory of the Truth that defeats the Envy Finally</s-sd:hasEnvironment>
+        <s-sd:hasMessage>republican freedom</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasWikiDescription>== Early life ==
+
+Donatello was the son of Niccolò di Betto Bardi, who was a member of the Florentine Arte della Lana, and was born in Florence, probably in the year 1386. Donatello was educated in the house of the Martelli family. He apparently received his early artistic training in a goldsmith&apos;s workshop, and then worked briefly in the studio of Lorenzo Ghiberti.In Pistoia in 1401, Donatello met the older Filippo Brunelleschi, with whom he may have had a romantic relationship. They likely went to Rome together around 1403, staying until the next year, to study the architectural ruins. Brunelleschi informally tutored Donatello in goldsmithing and sculpture. Brunelleschi&apos;s buildings and Donatello&apos;s sculptures are both considered supreme expressions of the spirit of this era in architecture and sculpture, and they exercised a potent influence upon the artists of the age.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900131831 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900131831">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasBackgroundElements>In the background is a dog, often a symbol of fidelity .  In a different space in the background two maids are shown rumraging through the chest</s-sd:hasBackgroundElements>
+        <s-sd:hasCulturalMovement>pittura veneta Alto Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasDescriptionRelations>Relation about Venus: 
+  The Venus of Urbino came to Florence in 1631 with the legacy of Victoria della Rovere .  The Venus was captured by photographer  Rouard in Paris at the end of the 1960s and &apos;90s 
+Relation about Angela del Moro: 
+  Angela del Moro, or Angela Zaffetta, was a leading courtesan in Venice</s-sd:hasDescriptionRelations>
+        <s-sd:hasEnvironment>a female fiery expanse</s-sd:hasEnvironment>
+        <s-sd:hasMessage>a female fiery expanse</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Venere, Afrodite, Angela del Moro</s-sd:hasSubject>
+        <s-sd:hasWikiDescription>== Description ==
+The Venus stares straight at the viewer, unconcerned with her nudity. In her right hand she holds a posy of roses whilst she holds her other hand over her genitals. In the near background is a dog, often a symbol of fidelity.  In a different space in the background two maids are shown rummaging through a cassone chest, where clothes were kept.
+The detailed depiction of the interior setting is unusual, perhaps unique, in Titian.  Titian contracted for the 21-year-old Ippolito de&apos; Medici, reluctantly made a cardinal (though not a priest), by his uncle, Pope Clement VII. He was trying to pursue a military career, and was a papal diplomat. On 20 October 1532 he spent the night in Venice with Angela del Moro, or Angela Zaffetta, a leading courtesan in Venice and sometimes a dining companion of Titian and Aretino, the latter a friend of the cardinal.  Titian painted Ippolito&apos;s portrait, and it seems likely that he was asked to add a nude portrait of Angela Zaffetta, or that Titian decided to paint one in the hope he would like it.
+
+On 20 December 1534 Titian wrote to Ippolito&apos;s chamberlain in Rome saying that he had been working on a painting of a woman for the cardinal.  Ippolito died in August 1535, and apparently never saw the painting, which was still in Titian&apos;s studio when Guidobaldo II della Rovere, the 24-year-old son of the Duke of Urbino came in January 1538 to sit for a portrait.  As letters from him and his mother show, he was extremely keen to buy it, and did so some months later; he refers to it simply as &quot;the nude woman&quot;, and was worried Titian would sell it to someone else. Later that year he inherited the Duchy of Urbino on the death of his father, hence the painting acquired the name by which it is usually known, although it seems it was mostly kept in Pesaro from early on.
+Alternatively, the painting may have been commissioned by Guidobaldo, possibly to celebrate his marriage in 1534 to the 10-year-old Giulia Varano, which made him Duke of Camerino, or its consummation, which was probably a few years later.  Some critics have seen references to marriage in details such as the maids at the cassone, where the corredo or trousseau of clothes generally given to the bride by her husband&apos;s family were stored. Rona Goffen sees Venus&apos;s hand &quot;caressing&quot; her genitals as such a reference, as it was believed at the time that a female &quot;emission&quot; or orgasm was necessary for conception to take place, and female masturbation was therefore allowed only in cases where the male had ejaculated and withdrawn.  The production of heirs was of great concern in elite marriages. Even the little dog on the bed has been brought into the argument; an identical dog is shown in Titian&apos;s portrait of the duke&apos;s mother Eleonora Gonzaga, the reasoning being that the dog identifies the house as a della Rovere home, and that it remains quiet indicates that the viewer is the husband of the woman.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900158550 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900158550">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasCulturalMovement>Primo Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasDescriptionRelations>hasDescriptionRelations: 
+Relation about Mercury: 
+  Mercury, clothed in red with a sword and a helmet, raises his caduceus or wooden rod towards some wispy gray clouds .  Mercury was born Mercury in 18th century and is believed to be the most powerful man in the world .  Flora and Venus look out at the viewer, the Cupid is blindfolded, and Mercury has turned his back on the others, and looks up at the clouds 
+Relation about Flora: 
+  Flora is Flora, a personified of Spring, with Flora being pursued by Zephyrus .  Flora the figure pursued by Zephyrus is a personification of Spring 
+Relation about Zephyr: 
+  The movement of the composition is from right to left, so following that direction the standard identification of the figures is: at far right &quot;Zephyrus, the biting wind of March, kidnaps and possesses the nymph Chloris, whom he later marries and transforms into a deity&quot;
+Relation about Cupid: 
+  Primavera (Botticelli) features six female figures and two male, along with a cupid in an orange grove .  Cupid&apos;s arrow is aimed at the middle Grace — Chastity, according to Wind — and the impact of love on chastity, leading to a marriage, features in many interpretations 
+Relation about Venus: 
+  The painting represents in fact an allegory of the Venus of Humanists, horoscope of Lorenzo di Pierfrancesco from what results from a letter of Marsilio Ficino</s-sd:hasDescriptionRelations>
+        <s-sd:hasDescriptionScene>In a different interpretation the Earthy carnal love represented by Zephyrus is renounced by the central figure of the Graces, who has turned her back to the scene .  The pastoral scenery is elaborate and pastoral scenes are elaborate</s-sd:hasDescriptionScene>
+        <s-sd:hasEnvironment>an allegory of the Venus of Humanists</s-sd:hasEnvironment>
+        <s-sd:hasMessage>Venus of Humanists</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Mercurio, Clori, Grazie, Flora, Zefiro, Cupido, Venere</s-sd:hasSubject>
+        <s-sd:hasWikiDescription>== Composition ==
+
+The painting features six female figures and two male, along with a cupid, in an orange grove. The movement of the composition is from right to left, so following that direction the standard identification of the figures is: at far right &quot;Zephyrus, the biting wind of March, kidnaps and possesses the nymph Chloris, whom he later marries and transforms into a deity; she becomes the goddess of Spring, eternal bearer of life, and is scattering roses on the ground.&quot; Chloris the nymph overlaps Flora, the goddess she transforms into.
+In the centre (but not exactly so) and somewhat set back from the other figures stands Venus, a red-draped woman in blue. Like the flower-gatherer, she returns the viewer&apos;s gaze. The trees behind her form a broken arch to draw the eye. In the air above her a blindfolded Cupid aims his bow to the left. On the left of the painting the Three Graces, a group of three females also in diaphanous white, join hands in a dance. At the extreme left Mercury, clothed in red with a sword and a helmet, raises his caduceus or wooden rod towards some wispy gray clouds.The interactions between the figures are enigmatic. Zephyrus and Chloris are looking at each other. Flora and Venus look out at the viewer, the Cupid is blindfolded, and Mercury has turned his back on the others, and looks up at the clouds. The central Grace looks towards him, while the other two seem to look at each other. Flora&apos;s smile was very unusual in painting at this date.The pastoral scenery is elaborate. There are 500 identified plant species depicted in the painting, with about 190 different flowers, of which at least 130 can be specifically identified. The overall appearance, and size, of the painting is similar to that of the millefleur (&quot;thousand flower&quot;) Flemish tapestries that were popular decorations for palaces at the time.These tapestries had not caught up by the 1480s with the artistic developments of the Italian Renaissance, and the composition of the painting has aspects that belong to this still Gothic style. The figures are spread in a rough line across the front of the picture space, &quot;set side by side like pearls on a string&quot;. It is now known that in the setting for which the painting was designed the bottom was about at eye level, or slightly above it, partly explaining &quot;the gently rising plane&quot; on which the figures stand.The feet of Venus are considerably higher than those of the others, showing she is behind them, but she is at the same scale, if not larger, than the other figures. Overlapping of other figures by Mercury&apos;s sword and Chloris&apos; hands shows that they stand slightly in front of the left Grace and Flora respectively, which might not be obvious otherwise, for example from their feet. It has been argued that the flowers do not grow smaller to the rear of the picture space, certainly a feature of the millefleur tapestries.The costumes of the figures are versions of the dress of contemporary Florence, though the sort of &quot;quasi-theatrical costumes designed for masquerades of the sort that Vasari wrote were invented by Lorenzo de&apos; Medici for civic festivals and tournaments.&quot; The lack of an obvious narrative may relate to the world of pageants and tableaux vivants as well as typically static Gothic allegories. == Meaning ==
+
+Various interpretations of the figures have been set forth, but it is generally agreed that at least at one level the painting is &quot;an elaborate mythological allegory of the burgeoning fertility of the world.&quot; It is thought that Botticelli had help devising the composition of the painting and whatever meanings it was intended to contain, as it appears that the painting reflects a deep knowledge of classical literature and philosophy that Botticelli is unlikely to have possessed. Poliziano is usually thought to have been involved in this, though Marsilio Ficino, another member of Lorenzo de&apos; Medici&apos;s circle and a key figure in Renaissance Neoplatonism, has also often been mentioned.One aspect of the painting is a depiction of the progress of the season of spring, reading from right to left. The wind of early Spring blows on the land and brings forth growth and flowers, presided over by Venus, goddess of April, with at the left Mercury, the god of the month of May in an early Roman calendar, chasing away the last clouds before summer. As well as being part of a sequence over the season, Mercury in dispelling the clouds is acting as the guard of the garden, partly explaining his military dress and his facing out of the picture space. A passage in Virgil&apos;s Aeneid describes him clearing the skies with his caduceus. A more positive, Neoplatonist view of the clouds is that they are &quot;the benificent veils through which the splendour of transcendent truth may reach the beholder without destroying him.&quot;Venus presides over the garden – an orange grove (a Medici symbol). It is also the Garden of the Hesperides of classical myth, from which the golden apples used in the Judgement of Paris came; the Hellenistic Greeks had decided that these were citrus fruits, exotic to them. According to Claudian, no clouds were allowed there. Venus stands in front of the dark leaves of a myrtle bush. According to Hesiod, Venus had been born of the sea after the semen of Uranus had fallen upon the waters. Coming ashore in a shell she had clothed her nakedness in myrtle, and so the plant became sacred to her. Venus appears here in her character as a goddess of marriage, clothed and with her hair modestly covered, as married women were expected to appear in public.The Three Graces are sisters, and traditionally accompany Venus. In classical art (but not literature) they are normally nude, and typically stand still as they hold hands, but the depiction here is very close to one adapting Seneca by Leon Battista Alberti in his De pictura (1435), which Botticelli certainly knew. From the left they are identified by Edgar Wind as Voluptas, Castitas, and Pulchritudo (Pleasure, Chastity and Beauty), though other names are found in mythology, and it is noticeable that many writers, including Lightbown and the Ettlingers, refrain from naming Botticelli&apos;s Graces at all.
+
+Cupid&apos;s arrow is aimed at the middle Grace — Chastity, according to Wind — and the impact of love on chastity, leading to a marriage, features in many interpretations. Chastity looks towards Mercury, and some interpretations, especially those identifying the figures as modelled on actual individuals, see this couple as one to match Chloris and Zephyrus on the other side of the painting.
+In a different interpretation the Earthy carnal love represented by Zephyrus to the right is renounced by the central figure of the Graces, who has turned her back to the scene, unconcerned by the threat represented to her by Cupid. Her focus is on Mercury, who himself gazes beyond the canvas at what many believe hung as the companion piece to Primavera: Pallas and the Centaur, in which &quot;love oriented towards knowledge&quot; (embodied by Pallas Athena) proves triumphant over lust (symbolized by the centaur).The basic identification of the figures is now widely agreed, but in the past other names have sometimes been used for the females on the right, who are two stages of the same person in the usual interpretation. The woman in the flowered dress may be called Primavera (a personification of Spring), with Flora the figure pursued by Zephyrus. One scholar suggested in 2011 that the central figure is not Venus at all, but Persephone.In addition to its overt meaning, the painting has been interpreted as an illustration of the ideal of Neoplatonic love popularized among the Medicis and their followers by Marsilio Ficino. The Neoplatonic philosophers saw Venus as ruling over both Earthly and divine love and argued that she was the classical equivalent of the Virgin Mary; this is alluded to by the way she is framed in an altar-like setting that is similar to contemporary images of the Virgin Mary. Venus&apos; hand gesture of welcome, probably directed to the viewer, is the same as that used by Mary to the Archangel Gabriel in contemporary paintings of the Annunciation.Punning allusions to Medici names probably include the golden balls of the oranges, recalling those on the Medici coat of arms, the laurel trees at right, for either Lorenzo, and the flames on the costume of both Mercury (for whom they are a regular attribute) and Venus, which are also an attribute of Saint Laurence (Lorenzo in Italian). Mercury was the god of medicine and &quot;doctors&quot;, medici in Italian. Such puns for the Medici, and in Venus and Mars the Vespucci, run through all Botticelli&apos;s mythological paintings.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900158551 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900158551">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasCulturalMovement>Primo Rinascimento Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasDescriptionRelations>Relation about Sea: 
+  She is one of the three Horae or Hours, Greek minor goddesses of the seasons and of other divisions of time, and attendants of Venus 
+Relation about Hours: 
+  She is one of the three Horae or Hours, Greek minor goddesses of the seasons and of other divisions of time, and attendants of Venus .  She was born in the same place as Venus, the goddess of Venus, and is believed to be the oldest of the Hours .  She is also known as the Hours of the Greek minor Goddesses of time 
+Relation about Zephyr: 
+  The nymph held by Zephyr may be Chloris, a flower nymph he married in some versions of her story 
+Relation about Venus: 
+  The Birth of Venus was painted for the villa of Castello, owned by Giovanni and Lorenzo di Pierfrancesco since 1447 .  The model of the figure of Venus is supposedly taken from an ancient statue of Venus of the Medici collections (Venus Anadiomène) of Venus, remembered by Benvenuto Rambaldi, since 1375 .  The land probably represents either Cythera or Cyprus, both Mediterranean islands regarded by the Greeks as territories of Venus</s-sd:hasDescriptionRelations>
+        <s-sd:hasDescriptionScene>It is the next scene in her story, where she arrives on land, blown by the wind .  The scene shows Venus&apos;s ministry of love, whether in a simple sense, or the expanded meaning of Renaissance Neoplatonism</s-sd:hasDescriptionScene>
+        <s-sd:hasEnvironment>the start of Venus&apos;s ministry of love</s-sd:hasEnvironment>
+        <s-sd:hasLights>At the right a female figure who may be floating slightly above the ground holds out a rich cloak or dress to cover Venus when she reaches the shore, as she is about to do</s-sd:hasLights>
+        <s-sd:hasMessage>Birth of Venus</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Ore, Zefiro, Afrodite, Pecten maximus, Venere</s-sd:hasSubject>
+        <s-sd:hasWikiDescription>== Description and subject ==
+
+In the centre the newly-born goddess Venus stands nude in a giant scallop shell.  Its size is purely imaginary, and is also found in classical depictions of the subject. At the left the wind god Zephyr blows at her, with the wind shown by lines radiating from his mouth. He is in the air, and carries a young female, who is also blowing, but less forcefully. Both have wings. Vasari was probably correct in identifying her as &quot;Aura&quot;, personification of a lighter breeze.  Their joint efforts are blowing Venus towards the shore, and blowing the hair and clothes of the other figures to the right.At the right a female figure who may be floating slightly above the ground holds out a rich cloak or dress to cover Venus when she reaches the shore, as she is about to do. She is one of the three Horae or Hours, Greek minor goddesses of the seasons and of other divisions of time, and attendants of Venus. The floral decoration of her dress suggests she is the Hora of Spring.Alternative identifications for the two secondary female figures involve those also found in the Primavera; the nymph held by Zephyr may be Chloris, a flower nymph he married in some versions of her story, and the figure on land may be Flora. Flora is generally the Roman equivalent of the Greek Chloris; in the Primavera Chloris is transformed into the figure of Flora next to her, following Ovid&apos;s Fasti, but it is hard to see that such a transformation is envisaged here. However, the roses blown along with the two flying figures would be appropriate for Chloris.
+The subject is not strictly the &quot;Birth of Venus&quot;, a title given to the painting only in the nineteenth century (though given as the subject by Vasari), but the next scene in her story, where she arrives on land, blown by the wind. The land probably represents either Cythera or Cyprus, both Mediterranean islands regarded by the Greeks as territories of Venus. == Interpretations ==
+Although there are ancient and modern texts that are relevant, no single text provides the precise imagery of the painting, which has led scholars to propose many sources and interpretations.   Many art historians who specialize in the Italian Renaissance have found Neoplatonic interpretations, of which two different versions have been articulated by Edgar Wind and Ernst Gombrich, to be the key to understanding the painting. Botticelli represented the Neoplatonic idea of divine love in the form of a nude Venus.For Plato – and so for the members of the Florentine Platonic Academy – Venus had two aspects:  she was an earthly goddess who 
+aroused humans to physical love or she was a heavenly goddess who inspired intellectual love in them.  Plato further argued that contemplation of physical beauty allowed the mind to better understand spiritual beauty.  So, looking at Venus, the most beautiful of goddesses, might at first raise a physical response in viewers which then lifted their minds towards the godly.  A Neoplatonic reading of Botticelli&apos;s Birth of Venus suggests that 15th-century viewers would have looked at the painting and felt their minds lifted to the realm of divine love.  
+The composition, with a central nude figure, and one to the side with an arm raised above the head of the first, and winged beings in attendance, would have reminded its Renaissance viewers of the traditional iconography of the Baptism of Christ, marking the start of his ministry on earth.  In a similar way, the scene shows here marks the start of Venus&apos;s ministry of love, whether in a simple sense, or the expanded meaning of Renaissance Neoplatonism.More recently, questions have arisen about Neoplatonism as the dominant intellectual system of late 15th-century Florence, and scholars have indicated that there might be other ways to interpret Botticelli&apos;s mythological paintings.  In particular, both Primavera and Birth of Venus have been seen as wedding paintings that suggest appropriate behaviors for brides and grooms.The laurel trees at right and laurel wreath worn by the Hora are punning references to the name &quot;Lorenzo&quot;, though it is uncertain whether Lorenzo il Magnifico, the effective ruler of Florence, or his young cousin Lorenzo di Pierfrancesco is meant.  In the same way the flowers in the air around Zephyr and on the textiles worn and carried by the Hora evoke the name of Florence.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900162846 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900162846">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasDescriptionRelations>Relation about Holofernes: 
+  Caravaggio painted Judith Slaying Holofernes (Artemisia Gentileschi, Florence) The painting passed from the Guardaroba di Pitti to the Uffizi attributed to Carvaggio in 1774 
+Relation about Judith: 
+  Caravaggio painted Judith Slaying Holofernes (Artemisia Gentileschi, Florence) The painting passed from the Guardaroba di Pitti to the Uffizi attributed to Carvaggio in 1774</s-sd:hasDescriptionRelations>
+        <s-sd:hasEnvironment>Judith Slaying Holofernes</s-sd:hasEnvironment>
+        <s-sd:hasMessage>a painting on canvas of identical subject and similar proportions</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Oloferne, Giuditta</s-sd:hasSubject>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900281988 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900281988">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasCulturalMovement>Alto Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasDescriptionRelations>Relation about David: 
+  &quot;David&quot; was carved by Michelangelo reusing a block of marble in which had already been partially sketched by Agostino di Duccio a &quot;Gigante&quot; commissioned in 1464 for a spur of S Maria del Fiore .  The pose of Michelangelo&apos;s David is unlike that of earlier Renaissance depictions of David .  The nudity reflects the Bible&apos;s account of David&apos;s life</s-sd:hasDescriptionRelations>
+        <s-sd:hasEnvironment>an anti-Medici riot</s-sd:hasEnvironment>
+        <s-sd:hasLights>This pose gives the figure a slight &apos;s-curving&apos; to its entire torso, giving it a s curve .  The pose causes the figure&apos;s hips and shoulders to rest at opposing angles, giving a slight s curve to the entire torso</s-sd:hasLights>
+        <s-sd:hasMessage>Il David di Michelangelo A masterpiece after the restoration</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Davide</s-sd:hasSubject>
+        <s-sd:hasTopic>It is based on a common theme of a standing heroic nude male nude by standing in front of the statue .  The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude</s-sd:hasTopic>
+        <s-sd:hasWikiDescription>== History == == Interpretation ==
+The pose of Michelangelo&apos;s David is unlike that of earlier Renaissance depictions of David. The bronze statues by Donatello and Verrocchio represented the hero standing victorious over the head of Goliath, and the painter Andrea del Castagno had shown the boy in mid-swing, even as Goliath&apos;s head rested between his feet, but no earlier Florentine artist had omitted the giant altogether. According to most scholars, David is depicted before his battle with Goliath. Instead of being shown victorious over a foe much larger than he, David looks tense and ready for battle after he has made the decision to fight Goliath, but, before the battle has actually taken place. His brow is drawn, his neck tense, and the veins bulge out of his lowered right hand. His left hand holds a sling that is draped over his shoulder and down to his right hand, which holds the handle of the sling. The nudity reflects the story of David as stated in the Bible, I Samuel 17:38-39: &quot;And Saul armed David with his armour, and he put an helmet of brass upon his head; also he armed him with a coat of mail. And David girded his sword upon his armour, and he assayed to go; for he had not proved it. And David said unto Saul, I cannot go with these; for I have not proved them. And David put them off him.&quot;The twist of his body effectively conveys to the viewer the feeling that he is about to move; an impression heightened with contrapposto. The statue is a Renaissance interpretation of a common ancient Greek theme of the standing heroic male nude. In the High Renaissance, contrapposto poses were thought of as a distinctive feature of antique sculpture, initially materialised in the Doryphoros of Polykleitos (c. 440 BC). This is typified in David, as the figure stands with one leg holding its full weight and the other leg forward. This classic pose causes the figure&apos;s hips and shoulders to rest at opposing angles, giving a slight s-curve to the entire torso. The contrapposto is emphasized by the turn of the head to the left, and by the contrasting positions of the arms.
+Michelangelo&apos;s David has become one of the most recognized works of Renaissance sculpture; a symbol of strength and youthful beauty.
+The colossal size of the statue alone impressed Michelangelo&apos;s contemporaries. Vasari described it as &quot;certainly a miracle that of Michelangelo, to restore to life one who was dead,&quot; and then listed all of the largest and most grand of the ancient statues that he had ever seen, concluding that Michelangelo&apos;s work surpassed &quot;all ancient and modern statues, whether Greek or Latin, that have ever existed.&quot;The proportions of the David are atypical of Michelangelo&apos;s work; the figure has an unusually large head and hands (particularly apparent in the right hand). The small size of the genitals, though, is in line with his other works and with Renaissance conventions in general, perhaps referencing the ancient Greek ideal of pre-pubescent male nudity. These enlargements may be due to the fact that the statue was originally intended to be placed on the cathedral roofline, where the important parts of the sculpture may have been accentuated in order to be visible from below. The statue is unusually slender (front to back) in comparison to its height, which may be a result of the work done on the block before Michelangelo began carving it.
+It is possible that the David was conceived as a political statue before Michelangelo began to work on it. Certainly, David the giant-killer had long been seen as a political figure in Florence, and images of the Biblical hero already carried political implications there. Donatello&apos;s bronze David, made for the Medici family, perhaps c. 1440, had been appropriated by the Signoria in 1494, when the Medici were exiled from Florence, and the statue was installed in the courtyard of the Palazzo della Signoria, where it stood for the Republican government of the city. By placing Michelangelo&apos;s statue in the same general location, the Florentine authorities ensured that David would be seen as a political parallel as well as an artistic response to that earlier work. These political overtones led to the statue being attacked twice in its early days. Protesters pelted it with stones the year it debuted, and, in 1527, an anti-Medici riot resulted in its left arm being broken into three pieces.
+Commentators have noted the presence of foreskin on David&apos;s penis, which is at odds with the Judaic practice of circumcision, but is consistent with the conventions of Renaissance art.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900287181 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900287181">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasBackgroundElements>Background figures are five nudes, whose meaning and function are subject to much speculation and debate .  The Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image</s-sd:hasBackgroundElements>
+        <s-sd:hasCulturalMovement>Alto Rinascimento</s-sd:hasCulturalMovement>
+        <s-sd:hasDescriptionRelations>Relation about Mary: 
+  Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family .  Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne .  There is some debate as to whether Mary is receiving the Child from Joseph or vice versa 
+Relation about Holy Family: 
+  The traditional theme of the Holy Family is interpreted by the author in an unconventional and hermetic way .  Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of Holy Family compositions</s-sd:hasDescriptionRelations>
+        <s-sd:hasDescriptionScene>The scene appears to be a rural one, with the Holy Family enjoying themselves on the grass</s-sd:hasDescriptionScene>
+        <s-sd:hasEnvironment>The scene appears to be a rural one</s-sd:hasEnvironment>
+        <s-sd:hasForegroundElements>Others have seen allegorical intents: Our Lady as the symbol of the Church, the naked as prophetic figures, or even the various ages of man, in contrast with the figures in the foreground</s-sd:hasForegroundElements>
+        <s-sd:hasMessage>Mannerism</s-sd:hasMessage>
+        <s-sd:hasPerspectiveStudy>The far background contains a mountainous landscape rendered in atmospheric perspective .     A mountainous landscape is rendered in an atmospheric perspective by the far background of the scene</s-sd:hasPerspectiveStudy>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasSubject>Maria, Sacra Famiglia, Bambino Gesù</s-sd:hasSubject>
+        <s-sd:hasTopic>The traditional theme of the Holy Family is interpreted by the author in an unconventional and hermetic way</s-sd:hasTopic>
+        <s-sd:hasWikiDescription>== Description ==
+Mary is the most prominent figure in the composition, taking up much of the center of the image.  She sits directly on the ground without a cushion between herself and the grass, to better communicate the theme of her relationship to the earth (?).  Joseph is positioned higher in the image than Mary, although this is an unusual feature in compositions of the Holy Family.  Mary is seated between his legs, as if he is protecting her, his great legs forming a kind of de facto throne.  There is some debate as to whether Mary is receiving the Child from Joseph or vice versa.  Saint John the Baptist, the patron saint of Florence, is very commonly included in Florentine works depicting the Madonna and Child. He is in the middle-ground of the painting, between the Holy Family and the background.  The scene appears to be a rural one, with the Holy Family enjoying themselves on the grass and separated from the curiously (seemingly) unrelated group at the back by a low wall.
+The painting is still in its original frame, one that Michelangelo might have influenced or helped design.  The frame is ornately carved and rather unusual for the five heads it contains which protrude three-dimensionally into space.  Similar to the nudes of the background, the meanings of these heads has been the subject of speculation.  The frame also contains carvings of crescent moons, stars, vegetation, and lions’ heads.  These symbols are, perhaps, references to the Doni and Strozzi families, taken from each one&apos;s coat of arms.  As depicted on the frame, “the moons are bound together with ribbons that interlock with the lions,” possibly referring to the marriage of the two families.There is a horizontal band, possibly a wall, separating the foreground and background. The background figures are five nudes, whose meaning and function are subject to much speculation and debate.  Because they are much closer to us, the viewers, the Holy Family is much larger than the nudes in the background, a device to aid the illusion of deep space in a two-dimensional image. Behind Saint John the Baptist is a semi-circular ridge, against which the &apos;ignudi&apos; are leaning, or upon which they are sitting. This semi-circle reflects or mirrors the circular shape of the painting itself and acts as a foil to the vertical nature of the principal group (the Holy family). Mary and Joseph gaze at Christ, but none of the background nudes looks directly at him.  The far background contains a mountainous landscape rendered in atmospheric perspective.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200706316 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200706316">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <s-sd:hasDescriptionScene>The encoding of the image is due to the writings of the saint where the scene is described in detail</s-sd:hasDescriptionScene>
+        <s-sd:hasEnvironment>Cornaro chapel</s-sd:hasEnvironment>
+        <s-sd:hasMessage>Cornaro chapel</s-sd:hasMessage>
+        <s-sd:hasSource>Wikipedia</s-sd:hasSource>
+        <s-sd:hasWikiDescription>== Context ==
+
+The adjective &quot;religious&quot; means that the experience occurs in connection with religious activities or is interpreted in context of a religion. Journalist Marghanita Laski writes in her study &quot;Ecstasy in Religious and Secular Experiences&quot;, first published in 1961:
+
+&quot;Epithets are very often applied to mystical experiences including ecstasies without, apparently, any clear idea about the distinctions that are being made. Thus we find experiences given such names as nature, religious, aesthetic, neo-platonic, ecc. experiences, where in some cases the name seems to derive from a trigger, sometimes from the overbelief.</s-sd:hasWikiDescription>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

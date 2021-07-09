@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://domain/smartology/semiotic-description#"
+     xml:base="https://domain/smartology/semiotic-description"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:arco="https://w3id.org/arco/ontology/arco/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:s-sd="https://domain/smartology/semiotic-description/">
+    <owl:Ontology rdf:about="https://domain/smartology/semiotic-description">
+        <owl:versionIRI rdf:resource="https://domain/smartology/semiotic-description/1.1"/>
+        <dc:creator>Antonio Picone</dc:creator>
+        <dc:creator>Luana Bulla</dc:creator>
+        <dc:creator>Luca Failla</dc:creator>
+        <dc:title xml:lang="en">Semiotic Description Ontology (Smartology network)</dc:title>
+        <rdfs:label xml:lang="en">Semiotic Description Ontology (Smartology network)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the class that indicates its composition.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasConnotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasConnotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its denotative description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasDenotativeTypeDefinition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the typology of the cultural asset based on a denotative reading (iconic, figurative, abstract).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationships -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationships">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the relationship between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementRelationshipsType -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementRelationshipsType">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This property describes the typology of the cultural asset based on its visual components and its expressive meaning. The work can be symmetrical (related to the concepts of order, clarity, balance and stability) or asymmetrical.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasElementsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasElementsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isElementsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which makes explicit the division between its elements.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasExpressiveDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasExpressiveDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its expressive description.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to its connotative interpretation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessageInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasMessageInterpretation">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isMessageInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:comment xml:lang="en">This property relates the generic class that specifies the interpretation of a cultural asset with the specific class which makes explicit its message.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasRelationsComposition -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasRelationsComposition">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isRelationsCompositionOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">The property links the class which indicates the generic composition of the cultural asset with the specific class which describes the relationships between the various components of the work.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasScene -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasScene">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSceneOf"/>
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural asset to the scene it represents.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSemioticDescription -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/hasSemioticDescription">
+        <owl:inverseOf rdf:resource="https://domain/smartology/semiotic-description/isSemioticDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property connects a &apos;CulturalProperty&apos; with &apos;SemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the class that indicates a cultural asset�s composition with the related work of art.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isConnotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isConnotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the denotative description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isDenotativeTypeDefinitionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has denotative type definition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has elements relationships&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementRelationshipsTypeOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element relationship type&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isElementsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isElementsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has element composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isExpressiveDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isExpressiveDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the expressive description with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the connotative interpretation with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isMessageInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isMessageInterpretationOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has message interpretation&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isRelationsCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isRelationsCompositionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;has relation composition&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSceneOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSceneOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This property relates the scene with the related cultural asset.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/isSemioticDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://domain/smartology/semiotic-description/isSemioticDescriptionOf">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;hasSemioticDescription&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasBackgroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasBackgroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the background elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasColour -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasColour">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the main colours that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasCulturalMovement -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasCulturalMovement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property links the cultural property to the related cultural movement</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDescriptionRelations -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionRelations">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasDescriptionScene -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasDescriptionScene">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the scene as it is shown by the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasEnvironment -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasEnvironment">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property makes explicit the environmental references linked to the description of the scene.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasForegroundElements -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasForegroundElements">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ElementsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the foreground elements that are part of the cultural asset.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasLights -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasLights">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/ExpressiveDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the lights and shadows that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasMessage -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasMessage">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its message.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasPerspectiveStudy -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasPerspectiveStudy">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of the perspective elements that compose it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSource -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSource">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the source of data to the class &apos;Message&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasSubject -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasSubject">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the subject of &apos;CulturalProperty&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasTopic">
+        <rdfs:domain rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property relates the cultural asset to the analysis of its topics.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/hasWikiDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://domain/smartology/semiotic-description/hasWikiDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property represents the description of the cultural asset provided by Wikipedia.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Composition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Composition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class represents the spatial organization of the cultural asset. The work of art is therefore linked to the analysis of its visual elements (i.e. subject, foreground element, background element).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ConnotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ConnotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a second reading of the cultural asset based on the analysis of the message and topics to which it is associated (i.e. message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a first reading of the cultural asset based on the descriptive analysis of the elements that compose it (i.e. scene, denotative type, subject).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/DenotativeTypeDefinition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/DenotativeTypeDefinition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the typology related to a denotative description of a cultural asset (figurative, iconic or abstract).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementRelationships -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementRelationships">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/RelationsComposition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the elements that make up the cultural good (e.g. relationship between main and secondary characters, relationship between characters and environment, connections between foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class represents a classification of the elements that make up the cultural property according to their spatial arrangement (foreground and background elements).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ElementsRelationshipsType -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ElementsRelationshipsType">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ElementRelationships"/>
+        <rdfs:comment xml:lang="en">This class groups the typology related to a relational description of the elements that make up a cultural asset. It can be symmetrical or asymmetrical.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/ExpressiveDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/ExpressiveDescription">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/SemioticDescription"/>
+        <rdfs:comment xml:lang="en">This class represents a reading of the work in an expressive key. The cultural asset is analyzed from the point of view of the technical components designed to convey its meaning (i.e. colour, lights and shadows).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Interpretation -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Interpretation">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/ConnotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements on which the interpretation of a cultural asset is based (eg message, topic).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Message -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Message">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Interpretation"/>
+        <rdfs:comment xml:lang="en">This class groups together the elements related to the message conveyed by the cultural property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/RelationsComposition -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/RelationsComposition">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/Composition"/>
+        <rdfs:comment xml:lang="en">This class describes the relationships between the various components of the work (i.e. elements composition, study of perspective).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Scene -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/Scene">
+        <rdfs:subClassOf rdf:resource="https://domain/smartology/semiotic-description/DenotativeDescription"/>
+        <rdfs:comment xml:lang="en">This class indicates the episode represented by the cultural asset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/SemioticDescription -->
+
+    <owl:Class rdf:about="https://domain/smartology/semiotic-description/SemioticDescription">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:comment xml:lang="en">This class represents the semiotic description of a cultural asset, taking into consideration the meanings present in a painting, a sculpture or a print.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Abstract -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Abstract">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a low figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Asymmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Asymmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents an asymmetrically organized cultural asset. A more natural effect is therefore sought in the work, capable of capturing the nuances of the movements of the figures or human moods.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Figurative -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Figurative">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a medium figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Iconic -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Iconic">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/DenotativeTypeDefinition"/>
+        <rdfs:comment xml:lang="en">This individual represents a high figurative gradualness of the painting.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://domain/smartology/semiotic-description/Symmetrical -->
+
+    <owl:NamedIndividual rdf:about="https://domain/smartology/semiotic-description/Symmetrical">
+        <rdf:type rdf:resource="https://domain/smartology/semiotic-description/ElementsRelationshipsType"/>
+        <rdfs:comment xml:lang="en">This individual represents a symmetrically organized cultural asset. Therefore the work of art is linked to the concepts of order, clarity, balance and stability.</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
